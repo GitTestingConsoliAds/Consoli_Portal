@@ -1692,7 +1692,7 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\16_9_image.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                 }
                 if (Campaign_Adtype.Equals("Video"))
                 {
