@@ -193,12 +193,13 @@ namespace Monetization_Automation.Page.Home.Page
               return this;
           }*/
 
-        public HomePage ClickEnvironmentRdbtn(string environment)
+            public HomePage ClickEnvironmentRdbtn(string environment)
             {
                 Thread.Sleep(2000);
                 Map.FindAndSelectEnvironment(environment);
                 return this;
             }
+
 
             public HomePage SelectBrand()
             {
@@ -713,6 +714,11 @@ namespace Monetization_Automation.Page.Home.Page
             Map.FindAndClickRevenueLink();
             return this;
         }
+        public HomePage ClickMediationLink()
+        {
+            Map.FindAndClickMediationLink();
+            return this;
+        }
         public HomePage CompareTopGridStats()
         {
             Map.FindAndCompareValuesofRevenueTopGrid();
@@ -731,6 +737,26 @@ namespace Monetization_Automation.Page.Home.Page
         public HomePage CompareBottomGridNetworkWiseStats()
         {
             Map.FindAndCompareValuesofRevenueBottomGridNetworkWise();
+            return this;
+        }
+        public HomePage CompareMediationStatsOfTopGrid()
+        {
+            Map.FindAndCompareValuesofMediationOfTopGrid();
+            return this;
+        }
+        public HomePage CompareMediationStatsOfTopGridAdnetwork()
+        {
+            Map.FindAndCompareValuesofAdnetworkMediationOfTopGrid();
+            return this;
+        }
+        public HomePage CompareMediationStatsOfBottomGrid()
+        {
+            Map.FindAndCompareValuesofMediationOfBottomGrid();
+            return this;
+        }
+        public HomePage CompareMediationAdnetworkStatsOfBottomGrid()
+        {
+            Map.FindAndCompareValuesofAdnetworkMediationOfBottomGrid();
             return this;
         }
         public HomePage ClickAppButtonOfRevenueTab()
@@ -779,18 +805,19 @@ namespace Monetization_Automation.Page.Home.Page
             Thread.Sleep(1000); Thread.Sleep(2000); 
             Map.FindAndClickCampaignsBrandTitleName().Click();
             Map.FindAndClickCampaignsBrandTitleName().SendKeys(ExcelUtil.ReadData(1, "Campaign_brands_AddNew") + DateTime.Now.ToString("MM/dd/yyyy HH:mm"));
+            Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
             return this;
         }
         public HomePage ClickCampaignBrandSaveBtn()
         {
-            Thread.Sleep(2000);
-            Map.FindAndClickBrandSaveBtn();
+            Thread.Sleep(10000);
+            Map.FindAndClickBrandSaveBtn().Click();
             return this;
         }
         public HomePage ClickCampaignBrandCloseBtn()
         {
             Thread.Sleep(2000);
-            Map.FindAndClickBrandCloseBtn();
+            Map.FindAndClickBrandCloseBtn().Click();
             return this;
         }
         public HomePage ClickNotIntCampaignAdAddNewBtn()
@@ -813,6 +840,7 @@ namespace Monetization_Automation.Page.Home.Page
             Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
             Map.FindAndClickTitleName().Click();
             Map.FindAndClickTitleName().SendKeys(ExcelUtil.ReadData(1, "Campaign_Add New") + DateTime.Now.ToString("MM/dd/yyyy HH:mm"));
+            Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
             return this;
         }
         public HomePage ClickCampaignAdSaveBtn()
@@ -824,7 +852,7 @@ namespace Monetization_Automation.Page.Home.Page
         public HomePage ClickCampaignAdOkBtn()
         {
             Thread.Sleep(2000);
-            Map.FindAndClickAdOkBtn();
+            Map.FindAndClickAdOkBtn().Click();
             return this;
         }
         public HomePage ClickCampaignAdUrl()
@@ -1290,10 +1318,22 @@ namespace Monetization_Automation.Page.Home.Page
             Map.FindAndClickEditBrandStatusYesBtn().Click();
             return this;
         }
-        public HomePage SeachUser()
+        public HomePage SearchUser()
         {
             Thread.Sleep(2000);
             Map.FindAndClickSearchUserField().SendKeys("Anwar");
+            return this;
+        }
+        public HomePage SearchAdnetwordInReportMediation()
+        {
+            Thread.Sleep(2000);
+            Map.FindAndClickReportMediationSearchField().SendKeys("Admob");
+            return this;
+        }
+        public HomePage ClickAdnetwork()
+        {
+            Thread.Sleep(2000);
+            Map.FindAndClickAdnetwork();
             return this;
         }
         /*  public HomePage CompareAppsstats()

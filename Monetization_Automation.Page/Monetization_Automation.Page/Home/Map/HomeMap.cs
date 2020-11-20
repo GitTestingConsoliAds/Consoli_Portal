@@ -275,6 +275,34 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return null;
         }
+        internal IWebElement FindAndClickReportMediationSearchField()
+        {
+            try
+            {
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); 
+                return window.FindElement(By.XPath("//input[@class='form-control input-sm input-small input-inline'][@type='search']"));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Search field not found" + e.Message);
+            }
+            return null;
+        }
+        internal IWebElement FindAndClickAdnetwork()
+        {
+            try
+            {
+                var script = "var div = document.getElementById('networks-table'); var child=div.getElementsByTagName('a'); child[0].click();";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Adnetwork not found" + e.Message);
+            }
+            return null;
+        }
         internal SelectElement FindAndSelectPlatform(string platform)
         {
             try
@@ -1692,7 +1720,7 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
+                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\16_9_image.png");
                 }
                 if (Campaign_Adtype.Equals("Video"))
                 {
@@ -2870,6 +2898,23 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return;
         }
+        internal void FindAndClickMediationLink()
+        {
+            try
+            {
+                var script = "jQuery(\"span:contains('Mediation')\").click();";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
+                Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
+                Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Revenue link not found" + " " + e.Message);
+            }
+            return;
+        }
         internal void FindAndCompareValuesofRevenueTopGrid()
         {
             try
@@ -2919,7 +2964,7 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     Assert.Fail("Completed not matched");
                 }
-                if (AppManageTableValues.tableArray[2] != revenue)
+                if (AppManageTableValues.tableArray[3] != revenue)
                 {
                     Assert.Fail("Revenue not matched");
                 }
@@ -3187,6 +3232,323 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return;
         }
+        internal void FindAndCompareValuesofMediationOfTopGrid()
+        {
+            try
+            {
+                var script = "var div = document.getElementsByClassName('inner-total'); var text=div[0].innerText; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableArray[0] = (string)js.ExecuteScript(script);
+                string requestPortal = AppManageTableValues.tableArray[0].Replace(",", "");
+                var script1 = "var div = document.getElementsByClassName('inner-total'); var text=div[1].innerText;return text;";
+                IJavaScriptExecutor js1 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[1] = (string)js1.ExecuteScript(script1);
+                var script2 = "var div = document.getElementsByClassName('inner-total'); var text=div[2].innerText;return text;";
+                IJavaScriptExecutor js2 = (IJavaScriptExecutor)DriverProperty.driver;
+                string impressionPortal = AppManageTableValues.tableArray[1].Replace(",", "");
+                AppManageTableValues.tableArray[2] = (string)js2.ExecuteScript(script2);
+                var script3 = "var div = document.getElementsByClassName('inner-total'); var text=div[3].innerText;return text;";
+                IJavaScriptExecutor js3 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[3] = (string)js3.ExecuteScript(script3);
+                var script4 = "var div = document.getElementsByClassName('inner-total'); var text=div[4].innerText;return text;";
+                IJavaScriptExecutor js4 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[4] = (string)js4.ExecuteScript(script4);
+                
+                //Database Query
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "Reports_Mediation_Top_grid_stats");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string Requests = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][3].ToString());
+                var RequestsDb = Convert.ToDouble(Requests);
+                string Impressions = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+                var ImpressionDb = Convert.ToDouble(Impressions);
+                string click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][5].ToString());
+                var clickDb = Convert.ToDouble(click);
+                var fillrate = ImpressionDb / RequestsDb * 100 ;
+                var fillrateroundoff = Math.Round(fillrate, 3);
+                string fillrateDb = fillrateroundoff.ToString() + 0.000 + "%";
+                var CTR = clickDb / ImpressionDb * 100;
+                var CTRroundoff = Math.Round(CTR, 3);
+                string CTRDb = CTRroundoff.ToString()+"%";
+                // string revenue = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+
+                if (requestPortal!= Requests)
+                {
+                    Assert.Fail("Requests not matched");
+                }
+                if (impressionPortal != Impressions)
+                {
+                    Assert.Fail("Impressions not matched");
+                }
+          /*/      if (AppManageTableValues.tableArray[2] != fillrateDb)
+                {
+                    Assert.Fail("fillrate not matched");
+                }*/
+                if (AppManageTableValues.tableArray[3] != click)
+                {
+                    Assert.Fail("click not matched");
+                }
+                if (AppManageTableValues.tableArray[4] != CTRDb)
+                {
+                      Assert.Fail("CTR not matched");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Mediation stats not matched" + " " + e.Message);
+            }
+            return;
+        }
+        internal void FindAndCompareValuesofMediationOfBottomGrid()
+        {
+            try
+            {
+                var script = "var div = document.getElementById('networks-table');var child= div.getElementsByTagName('td'); var text = child[0].textContent; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableArray[0] = (string)js.ExecuteScript(script);
+                string requestPortal = AppManageTableValues.tableArray[0].Replace(",", "");
+                var script1 = "var div = document.getElementById('networks-table');var child= div.getElementsByTagName('td'); var text = child[1].textContent; return text;";
+                IJavaScriptExecutor js1 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[1] = (string)js1.ExecuteScript(script1);
+                string impressionPortal = AppManageTableValues.tableArray[1].Replace(",", "");
+                var script2 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[2].textContent; return text;";
+                IJavaScriptExecutor js2 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[2] = (string)js2.ExecuteScript(script2);
+                var script3 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[3].textContent; return text;";
+                IJavaScriptExecutor js3 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[3] = (string)js3.ExecuteScript(script3);
+                var script4 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[4].textContent; return text;";
+                IJavaScriptExecutor js4 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[4] = (string)js4.ExecuteScript(script4);
+                var script5 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[5].textContent; return text;";
+                IJavaScriptExecutor js5 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[5] = (string)js5.ExecuteScript(script5);
+                var script6 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[6].textContent; return text;";
+                IJavaScriptExecutor js6 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[6] = (string)js6.ExecuteScript(script6);
+                var script7 = "var div = document.getElementById('networks-table');var child = div.getElementsByTagName('td'); text = child[7].textContent; return text;";
+                IJavaScriptExecutor js7 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[7] = (string)js7.ExecuteScript(script7);
+
+                //Database Query
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "Reports_Mediation_Bottom_grid");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string Adnetwork = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][0].ToString());
+                string Adtype = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][2].ToString());
+                string Request = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][6].ToString());
+                var RequestsDb = Convert.ToDouble(Request);
+                string Impression = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][7].ToString());
+                var ImpressionDb = Convert.ToDouble(Impression);
+                string Click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][8].ToString());
+                var clickDb = Convert.ToDouble(Click);
+                var fillrate = ImpressionDb / RequestsDb * 100;
+                var fillrateroundoff = Math.Round(fillrate, 3);
+                string fillrateDb = fillrateroundoff.ToString() + "%";
+                var CTR = clickDb / ImpressionDb * 100;
+                var CTRroundoff = Math.Round(CTR, 3);
+                string CTRDb = CTRroundoff.ToString() + "%";
+
+                if (requestPortal != Request)
+                {
+                    Assert.Fail("Requests not matched");
+                }
+                if (impressionPortal != Impression)
+                {
+                    Assert.Fail("Impressions not matched");
+                }
+                if (AppManageTableValues.tableArray[2] != fillrateDb)
+                {
+                    Assert.Fail("fillrate not matched");
+                }
+                if (AppManageTableValues.tableArray[3] != Click)
+                {
+                    Assert.Fail("click not matched");
+                }
+                if (AppManageTableValues.tableArray[4] != CTRDb)
+                {
+                    Assert.Fail("CTR not matched");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Mediation stats not matched" + " " + e.Message);
+            }
+            return;
+        }
+        internal void FindAndCompareValuesofAdnetworkMediationOfTopGrid()
+        {
+            try
+            {
+                var script = "var div = document.getElementsByClassName('inner-total'); var text=div[0].innerText; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableArray[0] = (string)js.ExecuteScript(script);
+                string requestPortal = AppManageTableValues.tableArray[0].Replace(",", "");
+                var script1 = "var div = document.getElementsByClassName('inner-total'); var text=div[1].innerText;return text;";
+                IJavaScriptExecutor js1 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[1] = (string)js1.ExecuteScript(script1);
+                var script2 = "var div = document.getElementsByClassName('inner-total'); var text=div[2].innerText;return text;";
+                IJavaScriptExecutor js2 = (IJavaScriptExecutor)DriverProperty.driver;
+                string impressionPortal = AppManageTableValues.tableArray[1].Replace(",", "");
+                AppManageTableValues.tableArray[2] = (string)js2.ExecuteScript(script2);
+                var script3 = "var div = document.getElementsByClassName('inner-total'); var text=div[3].innerText;return text;";
+                IJavaScriptExecutor js3 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[3] = (string)js3.ExecuteScript(script3);
+                var script4 = "var div = document.getElementsByClassName('inner-total'); var text=div[4].innerText;return text;";
+                IJavaScriptExecutor js4 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[4] = (string)js4.ExecuteScript(script4);
+
+                //Database Query
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "Reports_Mediation_Top_grid_stats");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string Requests = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][3].ToString());
+                var RequestsDb = Convert.ToDouble(Requests);
+                string Impressions = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+                var ImpressionDb = Convert.ToDouble(Impressions);
+                string click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][5].ToString());
+                var clickDb = Convert.ToDouble(click);
+                var fillrate = ImpressionDb / RequestsDb * 100;
+                var fillrateroundoff = Math.Round(fillrate, 3);
+                string fillrateDb = fillrateroundoff.ToString() + 0.000 + "%";
+                var CTR = clickDb / ImpressionDb * 100;
+                var CTRroundoff = Math.Round(CTR, 3);
+                string CTRDb = CTRroundoff.ToString() + "%";
+                // string revenue = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+
+                if (requestPortal != Requests)
+                {
+                    Assert.Fail("Requests not matched");
+                }
+                if (impressionPortal != Impressions)
+                {
+                    Assert.Fail("Impressions not matched");
+                }
+                /*/      if (AppManageTableValues.tableArray[2] != fillrateDb)
+                      {
+                          Assert.Fail("fillrate not matched");
+                      }*/
+                if (AppManageTableValues.tableArray[3] != click)
+                {
+                    Assert.Fail("click not matched");
+                }
+                if (AppManageTableValues.tableArray[4] != CTRDb)
+                {
+                    Assert.Fail("CTR not matched");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Mediation Adnetwork stats not matched" + " " + e.Message);
+            }
+            return;
+        }
+        internal void FindAndCompareValuesofAdnetworkMediationOfBottomGrid()
+        { 
+            try
+            {
+                var script = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[1].innerText; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableArray[0] = (string)js.ExecuteScript(script);
+              //  string AppTitle = AppManageTableValues.tableArray[0].Replace(" ", "");
+                var script1 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[2].innerText; return text;";
+                IJavaScriptExecutor js1 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[1] = (string)js1.ExecuteScript(script1);
+                string impressionPortal = AppManageTableValues.tableArray[1].Replace(",", "");
+                var script2 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[3].innerText; return text;";
+                IJavaScriptExecutor js2 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[2] = (string)js2.ExecuteScript(script2);
+                var script3 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[4].innerText; return text;";
+                IJavaScriptExecutor js3 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[3] = (string)js3.ExecuteScript(script3);
+                var script4 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[5].innerText; return text;";
+                IJavaScriptExecutor js4 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[4] = (string)js4.ExecuteScript(script4);
+                var script5 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[6].innerText; return text;";
+                IJavaScriptExecutor js5 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[5] = (string)js5.ExecuteScript(script5);
+                var script6 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[7].innerText; return text;";
+                IJavaScriptExecutor js6 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[6] = (string)js6.ExecuteScript(script6);
+                var script7 = "var div = document.getElementById('example'); var child = div.getElementsByTagName('td'); text = child[8].innerText; return text;";
+                IJavaScriptExecutor js7 = (IJavaScriptExecutor)DriverProperty.driver;
+                AppManageTableValues.tableArray[7] = (string)js7.ExecuteScript(script7);
+
+                //Database Query
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "Reports_Mediation_Bottom_grid");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string AppTitle = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][3].ToString());
+                string OsID = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+                string SdkVersion = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][0].ToString());
+                string Request = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][6].ToString());
+                var RequestsDb = Convert.ToDouble(Request);
+                string Impression = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][7].ToString());
+                var ImpressionDb = Convert.ToDouble(Impression);
+                string Click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][8].ToString());
+                var clickDb = Convert.ToDouble(Click);
+                var fillrate = ImpressionDb / RequestsDb * 100;
+                var fillrateroundoff = Math.Round(fillrate, 3);
+                string fillrateDb = fillrateroundoff.ToString() + "%";
+                var CTR = clickDb / ImpressionDb * 100;
+                var CTRroundoff = Math.Round(CTR, 3);
+                string CTRDb = CTRroundoff.ToString() + "%";
+
+                if (AppManageTableValues.tableArray[0] != AppTitle)
+                {
+                    Assert.Fail("Requests not matched");
+                }
+                if (AppManageTableValues.tableArray[2] != SdkVersion)
+                {
+                    Assert.Fail("SdkVersion not matched");
+                }
+                if (AppManageTableValues.tableArray[3] != Request)
+                {
+                    Assert.Fail("Request not matched");
+                }
+                if (AppManageTableValues.tableArray[4] != Impression)
+                {
+                    Assert.Fail("Impression not matched");
+                }
+                if (AppManageTableValues.tableArray[5] != fillrateDb)
+                {
+                    Assert.Fail("fillrate not matched");
+                }
+                if (AppManageTableValues.tableArray[6] != Click)
+                {
+                    Assert.Fail("Click not matched");
+                }
+                if (AppManageTableValues.tableArray[7] != CTRDb)
+                {
+                    Assert.Fail("CTR not matched");
+                }
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Mediation Adnetwork stats not matched" + " " + e.Message);
+            }
+            return;
+        }
         internal void FindAndSelectRevenueTable()
         {
 
@@ -3288,14 +3650,12 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return null;
         }
-        internal void FindAndClickBrandSaveBtn()
+        internal IWebElement FindAndClickBrandSaveBtn()
         {
             try
             {
 
-                var script = "jQuery(\"button:contains('Save changes')\").click();";
-                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
-                js.ExecuteScript(script);
+                return window.FindElement(By.XPath("//button[@id='btn-promoting-app'][@class='btn btn-primary']"));
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
@@ -3304,16 +3664,14 @@ namespace Monetization_Automation.Page.Home.Map
             {
                 Assert.Fail("Ad Save Button not found" + " " + e.Message);
             }
-            return;
+            return null;
         }
-        internal void FindAndClickBrandCloseBtn()
+        internal IWebElement FindAndClickBrandCloseBtn()
         {
             try
             {
 
-                var script = "jQuery(\"button:contains('Close')\").click();";
-                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
-                js.ExecuteScript(script);
+                return window.FindElement(By.XPath("//button[@id='modal-content-brandTitle-close']"));
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
@@ -3322,7 +3680,7 @@ namespace Monetization_Automation.Page.Home.Map
             {
                 Assert.Fail("Brand popup Close Button not found" + " " + e.Message);
             }
-            return;
+            return null;
         }
         internal IWebElement FindAndClickNotIntCampaignAddNewBtn()
         {
@@ -3385,14 +3743,12 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return;
         }
-        internal void FindAndClickAdOkBtn()
+        internal IWebElement FindAndClickAdOkBtn()
         {
             try
             {
 
-                var script = "jQuery(\"button:contains('OK')\").click();";
-                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
-                js.ExecuteScript(script);
+                return window.FindElement(By.XPath("//button[@class='confirm btn btn-lg btn-primary']"));
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                // Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
@@ -3401,7 +3757,7 @@ namespace Monetization_Automation.Page.Home.Map
             {
                 Assert.Fail("Ad Ok Button not found" + " " + e.Message);
             }
-            return;
+            return null;
         }
         internal IWebElement FindAndClickAdUrlToPromoteField()
         {

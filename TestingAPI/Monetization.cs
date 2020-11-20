@@ -68,8 +68,8 @@ namespace Monetization_Automation.Test
         
          public void TS_Login_Monetization()
          {
-              loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
-              loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
+            loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
+            loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
             Extension.CaptureScreenShot("LoginScreen");
              /* loginPageMonetization.ClickRegisterButton();
               loginPageMonetization.ClickFullNameForRegisteration();
@@ -385,7 +385,7 @@ namespace Monetization_Automation.Test
             // Create Users
             Monetization_App_Management();
             homePageMonetization.ClickUsersLink();
-            homePageMonetization.SeachUser();
+           // homePageMonetization.SeachUser();
             homePageMonetization.DeleteUser();
             homePageMonetization.ClickBrandStatusYesBtn();
 
