@@ -1720,16 +1720,16 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\16_9_image.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                 }
                 if (Campaign_Adtype.Equals("Video"))
                 {
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\16_9_image.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                     Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\Potraitlessthen30.mp4");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\Potraitlessthen30.mp4");
                     Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
 
                 }
@@ -1738,14 +1738,14 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\banner\\320_100_banner.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                 }
                 if (Campaign_Adtype.Equals( "Native"))
                 {
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\native\\Native.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\Native.png");
                     IWebElement Title = window.FindElement(By.XPath("//input[@id='input_native_title']"));
                     Title.SendKeys(ExcelUtil.ReadData(1, "Campaign_Native_title"));
                     IWebElement SubTitle = window.FindElement(By.XPath("//input[@id='input_native_subtitle']"));
@@ -1760,9 +1760,9 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\16_9_image.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                     Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Interstitial&videocreatives\\Potraitlessthen30");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\Potraitlessthen30");
                     Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
                 }
                 if (Campaign_Adtype.Equals("Icon"))
@@ -1770,7 +1770,7 @@ namespace Monetization_Automation.Page.Home.Map
                     /* Extension.HighLighterMethod(window, window.FindElement(By.XPath("//input[@id='input_creative_images']")));
                      return window.FindElement(By.XPath("//input[@id='input-creative-name']"));*/
                     IWebElement UploadImage = window.FindElement(By.Id("input_creative_images"));
-                    UploadImage.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\Icon\\Mosque-PNG-Image.png");
+                    UploadImage.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\16_9_image.png");
                 }
             }
             catch (Exception e)
@@ -2264,8 +2264,9 @@ namespace Monetization_Automation.Page.Home.Map
         {
             try
             {
-
-                var script = "jQuery(\"span:contains('Manage')\").click();";
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                var script = "var div= document.getElementsByClassName('nav-item');var child = div[9].getElementsByTagName('a');child[0].click();";
                 IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
                 js.ExecuteScript(script);
                 Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
@@ -2492,7 +2493,7 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return null;
         }
-        internal IWebElement FindCrossPromotionCampaignSearchField()
+        internal IWebElement FindCrossPromotionCampaignSearchField(string searchValue)
         {
             try
             {
@@ -2502,9 +2503,11 @@ namespace Monetization_Automation.Page.Home.Map
                 Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
                 Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
                 Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
-
-               // Extension.HighLighterMethod(window, window.FindElement(By.XPath("//*[@class='form-control input-sm input-small input-inline']")));
                 return window.FindElement(By.XPath("//*[@class='form-control input-sm input-small input-inline']"));
+
+               /* var script = string.Format("var searchElement = document.getElementsByClassName('form-control input-sm input-small input-inline'); searchElement[0].value = '{0}'", searchValue);
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);*/
             }
             catch (Exception e)
             {
@@ -3950,10 +3953,7 @@ namespace Monetization_Automation.Page.Home.Map
 
             try
             {
-                return window.FindElement(By.XPath("//input[contains(@class, 'select2-search__field')]"));
-                /*  var script = "var div = document.getElementsByClassName('select2-selection__rendered');var child= div[0].click();";
-                  IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
-                  js.ExecuteScript(script);*/
+                return window.FindElement(By.CssSelector("input.select2-search__field"));
             }
             catch (Exception e)
             {
@@ -4045,7 +4045,7 @@ namespace Monetization_Automation.Page.Home.Map
         {
             try
             {
-                 if (PromotingApps.Equals("ABA English"))
+                 if (PromotingApps.Equals("ABA English - Learn English"))
                  {
                      Thread.Sleep(1000);
                      var script = "var div = document.getElementsByClassName('filter-option pull-left'); div[0].click(); var child = document.getElementsByClassName('fa fa-android'); child[0].click();";
@@ -4423,7 +4423,7 @@ namespace Monetization_Automation.Page.Home.Map
             try
             {
                 var customIcon = window.FindElement(By.XPath("//input[@id='file']"));
-                customIcon.SendKeys("D:\\Automation_Monetization\\Automation_Monetization\\Automation_Data\\Latestset\\appicon.png");
+                customIcon.SendKeys("E:\\Automation\\Monetization_Automation\\Montization_Automation\\CreativeSets\\3_2_image.png");
             }
             catch (Exception e)
             {

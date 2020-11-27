@@ -148,9 +148,7 @@ namespace Monetization_Automation.Test
       
         public void TS_Monetization_App_Creation()
         {
-
             //APP CREATION:
-            Monetization_App_Management();
             homePageMonetization.ClickNewApp();
             homePageMonetization.ClickCreateManuallybtn();
             homePageMonetization.ClickAppTitle();
@@ -244,11 +242,11 @@ namespace Monetization_Automation.Test
             homePageMonetization.ValidateCrossNotIntegratedCampaign();
             
         }
-     
+        [TestMethod]
         public void TS_Monetization_Not_Intergrated_Network_Advertising_Campaign_Creation()
         //NETWORK NON INTEGRATED CAMPAIGN CREATION:
         {
-            
+            Monetization_App_Management();
             homePageMonetization.ClickNewCampaignBtn();
             homePageMonetization.selectNetworkCampaignRadioBtn();
             homePageMonetization.selectNetworkCampaignNoBtn();
@@ -258,15 +256,15 @@ namespace Monetization_Automation.Test
             homePageMonetization.InsertCampaignBrandTitleName();
             homePageMonetization.ClickCampaignBrandSaveBtn();
             homePageMonetization.ClickCampaignAdOkBtn();
-            homePageMonetization.ClickCampaignBrandCloseBtn();
-            // homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
+       //     homePageMonetization.ClickCampaignBrandCloseBtn();
+          //  homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
             homePageMonetization.ClickNotIntAdvertisingCampaignAdAddNewBtn();
             homePageMonetization.InsertCampaignAdTitleName();
             homePageMonetization.ClickCampaignAdSaveBtn();
             homePageMonetization.ClickCampaignAdOkBtn();
             homePageMonetization.SelectCampaignAttribution(Utils.ExcelUtil.ReadData(1, "Campaign_Attribution"));
             homePageMonetization.SelectCampaignClickUrl();
-            // homePageMonetization.ClickCampaignAdName();
+            homePageMonetization.ClickCampaignAdName();
             homePageMonetization.ClickCampaignPlatform(Utils.ExcelUtil.ReadData(1, "Platfrom"));
             homePageMonetization.SelectCampaignRegions();
             homePageMonetization.SelectCampaignDailyImpressionPerUserCap();
@@ -290,7 +288,6 @@ namespace Monetization_Automation.Test
         public void TS_Monetization_Integrated_CrossPromotion_Campaign_Creation() {
 
             //CROSS PROMOTION INTEGRATED CAMPAIGN:
-            Monetization_App_Management();
             homePageMonetization.ClickNewCampaignBtn();
             homePageMonetization.ClickCampaignType();
             homePageMonetization.ClickIntegratedCrosspromoCampaign();
@@ -322,7 +319,6 @@ namespace Monetization_Automation.Test
 
         public void TS_Monetization_Intergrated_Network_Advertising_Campaign_Creation() {
             //NETWORK ADV INTEGRATED CAMPAIGN:
-           
             homePageMonetization.ClickNewCampaignBtn();
             homePageMonetization.selectNetworkCampaignRadioBtn();
             homePageMonetization.ClickNetworkIntegratedCampaign();
@@ -425,6 +421,7 @@ namespace Monetization_Automation.Test
         {
             homePageMonetization.ClickUserName();
             homePageMonetization.ClickLogOutButton();
+
         }
 
         [TestMethod]
@@ -436,7 +433,8 @@ namespace Monetization_Automation.Test
             TS_Monetization_Not_Intergrated_Network_Advertising_Campaign_Creation();
             TS_Monetization_App_Logout();
         }
-
+        
+        [TestMethod]
         public void B_BS_Monetization_Both_publisheradvertiser_Flow()
         {
            Monetization_App_Management();

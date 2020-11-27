@@ -45,8 +45,8 @@ namespace Monetization_Automation.Utils
             string directoryPath = @"E:\Automation\Monetization_Automation\Montization_Automation\" + "PortalScreenShots" + currentDate.ToString(dateFormat);
             Directory.CreateDirectory(directoryPath);
             var pathToSave = System.IO.Path.Combine(directoryPath, " - " + DateTime.Now.ToString(timeFormat) + fileName + ".jpg");
-            Screenshot screenShot = ((ITakesScreenshot)DriverProperty.driver).GetScreenshot();
-            screenShot.SaveAsFile(pathToSave);
+          //  Screenshot screenShot = ((ITakesScreenshot)DriverProperty.driver).GetScreenshot();
+           // screenShot.SaveAsFile(pathToSave);
         }
 
         public static void ExecuteCronJob(string URL)

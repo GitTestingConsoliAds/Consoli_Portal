@@ -472,7 +472,7 @@ namespace Monetization_Automation.Page.Home.Page
           public HomePage clickAppsManagement()
         {
 
-            Thread.Sleep(2000);
+            Thread.Sleep(5000);
             Map.FindAndClickAppsManagement();
             return this;
         }
@@ -571,25 +571,25 @@ namespace Monetization_Automation.Page.Home.Page
         public HomePage SearchCrossIntCampaign()
         {
             Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(2000); Thread.Sleep(2000);
-            Map.FindCrossPromotionCampaignSearchField().SendKeys(AppManageTableValues.SecondCompareValue);
+            Map.FindCrossPromotionCampaignSearchField(AppManageTableValues.SecondCompareValue);
             return this;
         }
         public HomePage SearchCrossNotIntCampaign()
         {
             Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(2000); Thread.Sleep(2000);
-            Map.FindCrossPromotionCampaignSearchField().SendKeys(AppManageTableValues.SecondCompareValue);
+            Map.FindCrossPromotionCampaignSearchField(AppManageTableValues.SecondCompareValue);
             return this;
         }
         public HomePage SearchNetworkIntCampaign()
         {
             Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(3000);
-            Map.FindCrossPromotionCampaignSearchField().SendKeys(AppManageTableValues.SecondCompareValue);
+            Map.FindCrossPromotionCampaignSearchField(AppManageTableValues.SecondCompareValue);
             return this;
         }
         public HomePage SearchNetworkNotIntCampaign()
         {
             Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(3000);
-            Map.FindCrossPromotionCampaignSearchField().SendKeys(AppManageTableValues.SecondCompareValue);
+            Map.FindCrossPromotionCampaignSearchField(AppManageTableValues.SecondCompareValue);
             return this;
         }
         public HomePage ValidateCrossIntegratedCampaign()
@@ -907,8 +907,8 @@ namespace Monetization_Automation.Page.Home.Page
         }
         public HomePage SelectCampaignRegions()
         {
-            Thread.Sleep(2000);
-           // Map.FindAndClickCampaignRegions().Click();
+            Thread.Sleep(4000);
+           //Map.FindAndClickCampaignRegions().Click();
             Map.FindAndClickCampaignRegions().SendKeys(ExcelUtil.ReadData(1, "Campaign_Region"));
             Map.FindAndClickCampaignRegions().SendKeys(Keys.Enter);
             return this;
@@ -936,8 +936,11 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000);
             Map.FindAndClickLogOutBtn().Click();
+            DriverProperty.driver.Close();
+            DriverProperty.driver.Quit();
             return this;
         }
+
         public HomePage ClickUserName()
         {
             Thread.Sleep(2000);
