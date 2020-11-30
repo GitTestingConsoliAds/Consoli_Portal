@@ -70,6 +70,7 @@ namespace Monetization_Automation.Test
          {
             loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
             loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
+            Extension.DeleteOldFilesFolder();
             Extension.CaptureScreenShot("LoginScreen");
              /* loginPageMonetization.ClickRegisterButton();
               loginPageMonetization.ClickFullNameForRegisteration();
