@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="508d8c8b-ce75-4c13-b344-68860bc43fac" name="SYSTEM@DESKTOP-5AJ0SB3 2020-11-30 15:55:40" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Default Test Settings" id="1f5e37ec-3d2a-458f-bd72-30f082490478">
-    <Deployment userDeploymentRoot="E:\Automation\Monetization_Automation\Montization_Automation\PortalScreenShots" useDefaultDeploymentRoot="false" runDeploymentRoot="SYSTEM_DESKTOP-5AJ0SB3 2020-11-30 15_55_40" />
+<TestRun id="02529c30-83c5-45e4-9b0c-53779d77903f" name="SYSTEM@DESKTOP-5AJ0SB3 2020-11-30 16:21:01" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="86e6a291-694a-41f6-a0bd-6e45ec7d20f2">
+    <Deployment userDeploymentRoot="E:\Automation\Monetization_Automation\Montization_Automation\PortalScreenShots" useDefaultDeploymentRoot="false" runDeploymentRoot="SYSTEM_DESKTOP-5AJ0SB3 2020-11-30 16_21_01" />
     <Execution>
       <TestTypeSpecific />
       <AgentRule name="Execution Agents">
@@ -9,17 +9,17 @@
     </Execution>
     <Properties />
   </TestSettings>
-  <Times creation="2020-11-30T15:55:40.8734816+05:00" queuing="2020-11-30T15:55:45.6557516+05:00" start="2020-11-30T15:55:45.7846782+05:00" finish="2020-11-30T16:17:42.5821931+05:00" />
+  <Times creation="2020-11-30T16:21:01.1049027+05:00" queuing="2020-11-30T16:21:03.5215207+05:00" start="2020-11-30T16:21:03.6874266+05:00" finish="2020-11-30T16:43:14.5041893+05:00" />
   <ResultSummary outcome="Completed">
     <Counters total="2" executed="2" passed="2" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
     <UnitTest name="B_BS_Monetization_Both_publisheradvertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="7269b8df-ed72-628d-b9c8-9ff9f828465f">
-      <Execution id="a8362fc2-81fd-46ad-b2a9-6a37f70e067f" />
+      <Execution id="1e9ef2a0-d8b2-438e-8ce9-679c28f6b8e3" />
       <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="B_BS_Monetization_Both_publisheradvertiser_Flow" />
     </UnitTest>
     <UnitTest name="A_BS_Monetization_Advertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="b23dfb95-77c5-d445-6682-37cb15ba83e2">
-      <Execution id="a1bea544-d3a8-4a67-b17c-749cb87d34bc" />
+      <Execution id="2cd0d795-0b1d-4025-bff0-f98cc0f5692e" />
       <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="A_BS_Monetization_Advertiser_Flow" />
     </UnitTest>
   </TestDefinitions>
@@ -28,11 +28,11 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" executionId="a1bea544-d3a8-4a67-b17c-749cb87d34bc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" executionId="a8362fc2-81fd-46ad-b2a9-6a37f70e067f" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" executionId="2cd0d795-0b1d-4025-bff0-f98cc0f5692e" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" executionId="1e9ef2a0-d8b2-438e-8ce9-679c28f6b8e3" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="a1bea544-d3a8-4a67-b17c-749cb87d34bc" testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" testName="A_BS_Monetization_Advertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:10:35.7947051" startTime="2020-11-30T15:55:45.9036097+05:00" endTime="2020-11-30T16:06:22.2924397+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a1bea544-d3a8-4a67-b17c-749cb87d34bc">
+    <UnitTestResult executionId="2cd0d795-0b1d-4025-bff0-f98cc0f5692e" testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" testName="A_BS_Monetization_Advertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:10:53.0572991" startTime="2020-11-30T16:21:03.8393391+05:00" endTime="2020-11-30T16:31:57.5134599+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2cd0d795-0b1d-4025-bff0-f98cc0f5692e">
       <Output>
         <DebugTrace>****************** http://sheeda.consoliads.com/Lead-sprint88-placeholderChanges-sarmad/user/login
 ****************** 1ali.irshad@mizostudio.com
@@ -75,7 +75,7 @@
 </DebugTrace>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="a8362fc2-81fd-46ad-b2a9-6a37f70e067f" testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" testName="B_BS_Monetization_Both_publisheradvertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:11:20.1974600" startTime="2020-11-30T16:06:22.2954396+05:00" endTime="2020-11-30T16:17:42.4972415+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a8362fc2-81fd-46ad-b2a9-6a37f70e067f">
+    <UnitTestResult executionId="1e9ef2a0-d8b2-438e-8ce9-679c28f6b8e3" testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" testName="B_BS_Monetization_Both_publisheradvertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:11:16.8979566" startTime="2020-11-30T16:31:57.5164583+05:00" endTime="2020-11-30T16:43:14.4192379+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1e9ef2a0-d8b2-438e-8ce9-679c28f6b8e3">
       <Output>
         <DebugTrace>****************** http://sheeda.consoliads.com/Lead-sprint88-placeholderChanges-sarmad/user/login
 ****************** 1ali.irshad@mizostudio.com
