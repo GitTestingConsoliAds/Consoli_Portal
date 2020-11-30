@@ -242,7 +242,7 @@ namespace Monetization_Automation.Test
             homePageMonetization.ValidateCrossNotIntegratedCampaign();
             
         }
-        [TestMethod]
+     //   [TestMethod]
         public void TS_Monetization_Not_Intergrated_Network_Advertising_Campaign_Creation()
         //NETWORK NON INTEGRATED CAMPAIGN CREATION:
         {
