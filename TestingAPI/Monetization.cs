@@ -208,7 +208,9 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickNotIntegratedCrossCampaignTitleField();
             homePageMonetization.ClickNotIntCrossCampaignBrandAddNewBtn();
             homePageMonetization.InsertCampaignBrandTitleName();
+            Extension.CaptureScreenShot("Brand Details");
             homePageMonetization.ClickCampaignBrandSaveBtn();
+            Extension.CaptureScreenShot("Brand Details Added and Saved");
             homePageMonetization.ClickCampaignAdOkBtn();
             Extension.CaptureScreenShot("5_CamapaignCreated");
             homePageMonetization.ClickCampaignBrandCloseBtn();
@@ -233,6 +235,7 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickNewBtnofCreatives();
             homePageMonetization.ClickCreativeNameField();
             homePageMonetization.ClickChooseCreatives(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
+            Extension.CaptureScreenShot("creatives and other details saved");
             homePageMonetization.ClickCampaigncreativeSaveBtn();
             homePageMonetization.ClickCreativeCloseBtn();
             homePageMonetization.selectCreativeSet(ExcelUtil.ReadData(1, "Campaign_creatives"));
@@ -248,12 +251,14 @@ namespace Monetization_Automation.Test
         //NETWORK NON INTEGRATED CAMPAIGN CREATION:
         {
             homePageMonetization.ClickNewCampaignBtn();
+            Extension.CaptureScreenShot("Network Adveritising Campagin");
             homePageMonetization.selectNetworkCampaignRadioBtn();
             homePageMonetization.selectNetworkCampaignNoBtn();
             homePageMonetization.SelectCampaignAdType(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
             homePageMonetization.ClickNotIntegratedNetworkCampaignTitleField();
             homePageMonetization.ClickNotIntCampaignBrandAddNewBtn();
             homePageMonetization.InsertCampaignBrandTitleName();
+            Extension.CaptureScreenShot("Campaign details added");
             homePageMonetization.ClickCampaignBrandSaveBtn();
             homePageMonetization.ClickCampaignAdOkBtn();
        //     homePageMonetization.ClickCampaignBrandCloseBtn();
