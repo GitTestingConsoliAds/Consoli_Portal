@@ -1,0 +1,177 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="2c5494c9-16cc-4d0e-9bd3-ebf121c007f4" name="SYSTEM@DESKTOP-5AJ0SB3 2020-12-02 16:34:23" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="f3716610-0c16-4930-af5a-d24350e2a59f">
+    <Deployment userDeploymentRoot="E:\Automation\Monetization_Automation\Montization_Automation\PortalScreenShots" useDefaultDeploymentRoot="false" runDeploymentRoot="SYSTEM_DESKTOP-5AJ0SB3 2020-12-02 16_34_23" />
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+    <Properties />
+  </TestSettings>
+  <Times creation="2020-12-02T16:34:23.4854702+05:00" queuing="2020-12-02T16:34:27.7077900+05:00" start="2020-12-02T16:34:27.8567050+05:00" finish="2020-12-02T17:04:47.3758911+05:00" />
+  <ResultSummary outcome="Completed">
+    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="B_BS_Monetization_Both_publisheradvertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="7269b8df-ed72-628d-b9c8-9ff9f828465f">
+      <Execution id="82c3e0ae-56f0-43b8-b3f8-b2d0c5a1ea1b" />
+      <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="B_BS_Monetization_Both_publisheradvertiser_Flow" />
+    </UnitTest>
+    <UnitTest name="BS_Monetization_stats_Publisher_side" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="8b354cbd-d7bf-34d0-cfa0-0dae1bae11e1">
+      <Execution id="13b86f60-dea4-47c0-81c4-5a79fd9a0b6b" />
+      <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="BS_Monetization_stats_Publisher_side" />
+    </UnitTest>
+    <UnitTest name="A_BS_Monetization_Advertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="b23dfb95-77c5-d445-6682-37cb15ba83e2">
+      <Execution id="9aad1bcf-b780-42ae-942d-18c99a515b1d" />
+      <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="A_BS_Monetization_Advertiser_Flow" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" executionId="9aad1bcf-b780-42ae-942d-18c99a515b1d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" executionId="82c3e0ae-56f0-43b8-b3f8-b2d0c5a1ea1b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="8b354cbd-d7bf-34d0-cfa0-0dae1bae11e1" executionId="13b86f60-dea4-47c0-81c4-5a79fd9a0b6b" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="9aad1bcf-b780-42ae-942d-18c99a515b1d" testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" testName="A_BS_Monetization_Advertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:10:42.4582249" startTime="2020-12-02T16:34:28.0281338+05:00" endTime="2020-12-02T16:45:11.2590483+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="9aad1bcf-b780-42ae-942d-18c99a515b1d">
+      <Output>
+        <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
+****************** 1ali.irshad@mizostudio.com
+****************** amber123
+****************** On
+****************** Interstitial
+****************** Campaign Automated
+****************** AutoBrand
+****************** Automated Game
+****************** Adjust
+****************** https://app.mihcm.com/
+****************** Google Play
+****************** Pakistan
+****************** Highest
+****************** Brands
+****************** Buntoo Games
+****************** Car Robot 2019
+****************** Main Menu
+****************** 10
+****************** 10
+****************** New Set
+****************** Interstitial
+****************** New Set
+****************** Interstitial
+****************** Campaign Automated
+****************** AutoBrand
+****************** Automated Game
+****************** Adjust
+****************** https://app.mihcm.com/
+****************** Google Play
+****************** Pakistan
+****************** 10
+****************** New Set
+****************** Interstitial
+****************** New Set
+****************** CPI
+****************** 10
+****************** 100
+****************** 0.01
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="82c3e0ae-56f0-43b8-b3f8-b2d0c5a1ea1b" testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" testName="B_BS_Monetization_Both_publisheradvertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:11:27.8017880" startTime="2020-12-02T16:45:11.2620473+05:00" endTime="2020-12-02T16:56:39.0685177+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="82c3e0ae-56f0-43b8-b3f8-b2d0c5a1ea1b">
+      <Output>
+        <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
+****************** 1ali.irshad@mizostudio.com
+****************** amber123
+****************** new Automated brand
+****************** This brand is automated
+****************** Test1@consoliads.com
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+Brand Titlevalidation is successful
+****************** App Automated
+****************** com.newautomated.app
+****************** Unity
+****************** Google Play
+****************** Game
+****************** Action
+****************** new Automated brand
+****************** This brand is automated
+****************** Test1@consoliads.com
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+****************** https://play.google.com/store/apps/details?id=com.backstreet.gun.strike.counter.terrorist.fps.shooting&amp;hl=en
+****************** All ages
+App titlevalidation is successful
+****************** On
+****************** Interstitial
+****************** Campaign Automated
+****************** Glorious Guns
+****************** ABA English - Learn English
+****************** Pakistan
+****************** Brands
+****************** Buntoo Games
+****************** Car Robot 2019
+****************** Main Menu
+****************** 10
+****************** 10
+****************** New Set
+****************** Interstitial
+****************** New Set
+****************** Interstitial
+****************** Campaign Automated
+****************** Glorious Guns
+****************** ABA English - Learn English
+****************** Games
+****************** 10
+****************** Pakistan
+****************** Interstitial
+****************** New Set
+****************** CPI
+****************** 10
+****************** 100
+****************** 0.01
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="13b86f60-dea4-47c0-81c4-5a79fd9a0b6b" testId="8b354cbd-d7bf-34d0-cfa0-0dae1bae11e1" testName="BS_Monetization_stats_Publisher_side" computerName="DESKTOP-5AJ0SB3" duration="00:08:07.9423566" startTime="2020-12-02T16:56:39.0705171+05:00" endTime="2020-12-02T17:04:47.0190959+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="13b86f60-dea4-47c0-81c4-5a79fd9a0b6b">
+      <Output>
+        <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
+****************** 1ali.irshad@mizostudio.com
+****************** amber123
+****************** 9/1/2020 12:00:00 AM
+****************** 9/30/2020 12:00:00 AM
+****************** Secret Agent FPS Shooting Game
+****************** SELECT * FROM (SELECT c.*, sdk.ver FROM ( SELECT b.*, r.rev revenue,((impression / request) * 100) fill_rate, ((click / impression) * 100) ctr
+FROM( SELECT a.appID, a.title, a.package, a.osID, a.brandID, a.is_archive, a.sdkID, a.isAM, rici.request, rici.impression, rici.click, rici.installs
+FROM apps a LEFT JOIN (SELECT appid, SUM(rpt.request) request, SUM(rpt.impression) impression, SUM(rpt.click) click, SUM(INSTALL) AS installs
+FROM rpt_queue_apps_ads_event_stats_196 rpt WHERE appid IN ( SELECT appid FROM apps WHERE companyid = 196 AND is_archive = 0) AND datetime &gt;= '2020-09-01'AND datetime &lt;= '2020-09-30'
+AND scenesession = 1 GROUP BY appid) rici ON a.appid = rici.appid WHERE companyid = 196 AND a.osID != 0 AND a.is_archive = 0) b LEFT JOIN (
+SELECT app_id appid, SUM( revenue + bonus - service_charges) rev FROM rpt_auto_integration_45 WHERE app_id IN ( SELECT appid FROM apps WHERE companyid = 196
+AND is_archive = 0) AND created_at &gt;= '2020-09-01' AND created_at &lt;= '2020-09-30' GROUP BY app_id) r ON b.appid = r.appid) c, sdk_info sdk
+WHERE c.sdkID = sdk.sdkid ORDER BY revenue DESC) tblApps WHERE 1 = 1 AND (tblApps.brandID IN(12)) AND (tblApps.osID IN(41)) AND (tblApps.appID IN(17322)) ORDER BY tblApps.appID DESC
+LIMIT 0,10
+
+****************** Secret Agent FPS Shooting Game
+****************** 9/1/2020 12:00:00 AM
+****************** 9/30/2020 12:00:00 AM
+****************** Main Menu
+****************** SELECT seq.title as scene_title, ap.* FROM( SELECT sceneid as sceneID, SUM(`request`) as request, SUM(`impression`) as impression , SUM(`click`) as click, SUM(`install`) as installs , (SUM(`impression`) / SUM(`request`) * 100) as fill_rate, (SUM(`click`) / SUM(`impression`) * 100) as ctr FROM rpt_queue_apps_ads_event_stats_196 WHERE appid IN ( SELECT appid FROM apps WHERE companyid = 196 and appID = 17322 and apps.is_archive = 0 ) AND datetime &gt;= '2020-09-01' and datetime &lt;= '2020-09-30' AND scenesession = 1 GROUP BY sceneid) ap, seq_titles seq WHERE ap.sceneid = seq.seqTitleID ORDER BY impression DESC
+****************** Admob
+****************** SELECT  rpt_queue_apps_ads_event_stats_196.adID, ads.title as ad_network_title, ads.adID as ad_network_id,
+                            SUM(`request`) as request, SUM(`impression`) as impression , SUM(`click`) as click,
+                            SUM(`install`) as installs, ads.ad_type as ad_type, ads.provide_clicks as provide_clicks
+                            FROM rpt_queue_apps_ads_event_stats_196
+                            INNER JOIN ads ON ads.adID = rpt_queue_apps_ads_event_stats_196.adID
+                            WHERE
+                            (datetime &gt;= '2020-09-01' and datetime &lt;= '2020-09-30')
+                             and appID = "17322"
+                            GROUP BY rpt_queue_apps_ads_event_stats_196.adID
+</DebugTrace>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
