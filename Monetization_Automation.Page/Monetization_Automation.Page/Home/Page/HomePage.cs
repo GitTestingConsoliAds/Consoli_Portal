@@ -574,6 +574,56 @@ namespace Monetization_Automation.Page.Home.Page
             Map.FindCrossPromotionCampaignSearchField(AppManageTableValues.SecondCompareValue);
             return this;
         }
+
+        public HomePage ClickApplyBtnApp()
+        {
+            Thread.Sleep(2000);
+            Map.FindAndClickApplybtnApp().Click();
+            return this;
+        }
+
+        public HomePage ClickEnddatefilterApp(string enddate)
+        {
+            Thread.Sleep(3000);
+            Map.FindAndInsertDateFilterEndDateApp(enddate);
+            return this;
+        }
+
+        public HomePage CompareStatsOfAnAppAdnetworkStats()
+        {
+            Thread.Sleep(4000);
+            Map.FindAndCompareStatsofAppsAdnetwork();
+            return this;
+        }
+
+        public HomePage SearchRequiredAdnetwork()
+        {
+            Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+            Map.FindRequiredAdnetworkField().SendKeys(ExcelUtil.ReadData(1, "Adnetwork"));
+            return this;
+        }
+
+        public HomePage SearchRequiredScene()
+        {
+            Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+            Map.FindRequiredApplicationSearchField().SendKeys(ExcelUtil.ReadData(1, "Placeholder"));
+            return this;
+        }
+
+        public HomePage CompareStatsOfAnAppAdsStatsTab()
+        {
+            Thread.Sleep(4000);
+            Map.FindAndCompareStatsofAppsAdStats();
+            return this;
+        }
+
+        public HomePage ClickAppAdsStatsTab()
+        {
+            Thread.Sleep(4000);
+            Map.FindAndClickAppsAdStatsTab().Click();
+            return this;
+        }
+
         public HomePage SearchCrossNotIntCampaign()
         {
             Thread.Sleep(3000); Thread.Sleep(3000); Thread.Sleep(2000); Thread.Sleep(2000);

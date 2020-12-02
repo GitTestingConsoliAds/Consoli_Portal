@@ -2493,6 +2493,268 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return null;
         }
+
+        internal IWebElement FindAndInsertDateFilterEndDateApp(string enddate)
+        {
+
+            try
+            {
+                Thread.Sleep(4000); Thread.Sleep(4000); Thread.Sleep(4000);
+                //var EndDate = window.FindElement(By.XPath("//input[@class='input-mini form-control']"));
+                var EndDate = window.FindElement(By.CssSelector("body.page-header-fixed.page-sidebar-fixed.page-sidebar-closed-hide-logo.page-content-white.page-sidebar-closed:nth-child(2) div.daterangepicker.dropdown-menu.ltr.show-calendar.opensright:nth-child(15) div.calendar.right:nth-child(3) div.daterangepicker_input > input.input-mini.form-control"));
+                Thread.Sleep(4000);
+                EndDate.Clear();
+                EndDate.SendKeys(enddate);
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript("$(arguments[0]).change();", EndDate);
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Date filter end date field not found" + " " + e.Message);
+            }
+            return null;
+        }
+
+        internal void FindAndCompareStatsofAppsAdStats()
+        {
+            try
+            {
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                var script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[0].textContent; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableValues[0] = (string)js.ExecuteScript(script);
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[1].textContent; return text;";
+                AppManageTableValues.tableValues[1] = (string)js.ExecuteScript(script);
+                string portalRequest = AppManageTableValues.tableValues[1].Replace(",", "");
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[2].textContent; return text;";
+                AppManageTableValues.tableValues[2] = (string)js.ExecuteScript(script);
+                string portalImpression = AppManageTableValues.tableValues[2].Replace(",", "");
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[3].textContent; return text;";
+                AppManageTableValues.tableValues[3] = (string)js.ExecuteScript(script);
+                string fillrateportal = AppManageTableValues.tableValues[3].Replace("%", "");
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[4].textContent; return text;";
+                AppManageTableValues.tableValues[4] = (string)js.ExecuteScript(script);
+                String PortalClick = AppManageTableValues.tableValues[4].Replace("\r", "").Replace("\n", "").Replace("(", "").Replace(")", "").Replace(" ", "");
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[5].textContent; return text;";
+                AppManageTableValues.tableValues[5] = (string)js.ExecuteScript(script);
+                string ctrPortal = AppManageTableValues.tableValues[5].Replace("%", "");
+                script = "var div = document.getElementById('scene-summary'); var ch = div.getElementsByTagName('td'); var text = ch[6].textContent; return text;";
+                AppManageTableValues.tableValues[6] = (string)js.ExecuteScript(script);
+                //Database compare strings
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "App_AdStats_Scene");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string SceneName = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][0].ToString());
+                string Request = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][2].ToString());
+                string Impression = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][3].ToString());
+                string Click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+                string Installs = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][5].ToString());
+                var fillrate = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][6]).ToString();
+                var fillratedouble = Convert.ToDouble(fillrate);
+                var fillrateroundoff = Math.Round(fillratedouble, 3);
+                string fillratestring = fillrateroundoff.ToString();
+                string ctr = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][7].ToString());
+                var ctrdouble = Convert.ToDouble(ctr);
+                var ctrroundoff = Math.Round(ctrdouble, 3);
+                string ctrstring = ctrroundoff.ToString();
+
+                if (fillrateroundoff > 100)
+                {
+                    fillratestring = "100";
+                }
+                if (AppManageTableValues.tableValues[0] != SceneName)
+                {
+                    Assert.Fail("SceneName not matched");
+                }
+                if (portalRequest != Request)
+                {
+                    Assert.Fail("Request of an app not matched");
+                }
+                if (portalImpression != Impression)
+                {
+                    Assert.Fail("impressions of an app not matched");
+                }
+                if (PortalClick != Click)
+                {
+                    Assert.Fail("Click of an app not matched");
+                }
+                if (AppManageTableValues.tableValues[6] != Installs)
+                {
+                    Assert.Fail("Install of an app not matched");
+                }
+                if (fillrateportal != fillratestring)
+                {
+                    Assert.Fail("fillrate of an app not matched");
+                }
+                if (ctrPortal != ctrstring)
+                {
+                    Assert.Fail("ctr of an app not matched");
+                }
+                /*  if (revenuePortal != revenue)
+                  {
+                      Assert.Fail("revenue of an app not matched");
+                  }*/
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("App stats are not matching" + e.Message);
+            }
+        }
+
+        internal IWebElement FindAndClickAppsAdStatsTab()
+        {
+
+            try
+            {
+                Thread.Sleep(4000); Thread.Sleep(4000); Thread.Sleep(4000);
+                return window.FindElement(By.XPath("//a[contains(text(),'Ad Stats')]"));
+                /* var script = "var div = document.getElementsByClassName('table table-striped table-bordered table-hover dataTable no-footer'); var ch = div[0].getElementsByTagName('tr'); var fin=ch[1].getElementsByTagName('td'); var final= fin[5].getElementsByTagName('a'); final[0].click();";
+                 IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                 js.ExecuteScript(script);*/
+                Thread.Sleep(1000); Thread.Sleep(1000);
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("App not found" + " " + e.Message);
+            }
+            return null;
+        }
+
+        internal IWebElement FindRequiredAdnetworkField()
+        {
+            try
+            {
+                Thread.Sleep(4000); Thread.Sleep(4000);
+                //  Extension.HighLighterMethod(window, window.FindElement(By.XPath("//*[@class='form-control input-sm input-small input-inline']")));
+                return window.FindElement(By.CssSelector("body.page-header-fixed.page-sidebar-fixed.page-sidebar-closed-hide-logo.page-content-white.page-sidebar-closed:nth-child(2) div.page-container:nth-child(7) div.page-content-wrapper:nth-child(9) div.page-content div.row:nth-child(3) div.col-lg-12.col-md-12.col-sm-12.col-xs-12 div.tab-content div.tab-pane.fade.active.in:nth-child(6) div.row:nth-child(3) div.col-lg-12:nth-child(3) div.col-lg-12:nth-child(2) div.panel.panel-default:nth-child(3) div.panel-body div.dataTables_wrapper div.row:nth-child(1) div.col-md-6.col-sm-6:nth-child(2) div.dataTables_filter label:nth-child(1) > input.form-control.input-sm.input-small.input-inline"));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Search field not found" + " " + e.Message);
+            }
+            return null;
+        }
+
+        internal void FindAndCompareStatsofAppsAdnetwork()
+        {
+            try
+            {
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
+                var script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[0].textContent; return text;";
+                IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
+                js.ExecuteScript(script);
+                AppManageTableValues.tableValues[0] = (string)js.ExecuteScript(script);
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[1].textContent; return text;";
+                AppManageTableValues.tableValues[1] = (string)js.ExecuteScript(script);
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[2].textContent; return text;";
+                AppManageTableValues.tableValues[2] = (string)js.ExecuteScript(script);
+                string portalRequest = AppManageTableValues.tableValues[2].Replace(",", "");
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[3].textContent; return text;";
+                AppManageTableValues.tableValues[3] = (string)js.ExecuteScript(script);
+                string portalImpression = AppManageTableValues.tableValues[3].Replace(",", "");
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[4].textContent; return text;";
+                AppManageTableValues.tableValues[4] = (string)js.ExecuteScript(script);
+                string FillratePortal = AppManageTableValues.tableValues[4].Replace("%", "");
+                // String PortalClick = AppManageTableValues.tableValues[4].Replace("\r", "").Replace("\n", "").Replace("(", "").Replace(")", "").Replace(" ", "");
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[5].textContent; return text;";
+                AppManageTableValues.tableValues[5] = (string)js.ExecuteScript(script);
+                string clickPortal = AppManageTableValues.tableValues[5].Replace(" ", "");
+                script = "var div = document.getElementById('campaignList');  var ch = div.getElementsByTagName('td'); var text = ch[6].textContent; return text;";
+                AppManageTableValues.tableValues[6] = (string)js.ExecuteScript(script);
+                string CTRPortal = AppManageTableValues.tableValues[6].Replace("%", "");
+                //Database compare strings
+                int dataSetIndex = 1;
+                Thread.Sleep(4000);
+                Extension.OpenDBConnection();
+                Thread.Sleep(4000);
+                AppManageTableValues.queryArray[0] = ExcelUtil.ReadData(1, "App_AdStats_adnetwork");
+                Extension.ExecuteQueryPortal(SqlConnectionInstance.SqlConnection, dataSetIndex);
+                string Adnetwork = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][1].ToString());
+                string Request = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][3].ToString());
+                var RequestsDb = Convert.ToDouble(Request);
+                string Impression = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][4].ToString());
+                var ImpressionDb = Convert.ToDouble(Impression);
+                string Click = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][5].ToString());
+                var clickDb = Convert.ToDouble(Click);
+                string Adtype = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][7].ToString());
+                var fillrate = ImpressionDb / RequestsDb * 100;
+                var fillrateroundoff = Math.Round(fillrate, 3);
+                string fillrateDb = fillrateroundoff.ToString();
+                var CTR = clickDb / ImpressionDb * 100;
+                var CTRroundoff = Math.Round(CTR, 3);
+                string CTRDb = CTRroundoff.ToString();
+
+                if (fillrateroundoff > 100)
+                {
+                    fillrateDb = "100";
+                }
+                if (AppManageTableValues.tableValues[0] != Adnetwork)
+                {
+                    Assert.Fail("Adnetwork name not matched");
+                }
+                if (AppManageTableValues.tableValues[1] != Adtype)
+                {
+                    Assert.Fail("Adtype of an app not matched");
+                }
+                if (portalRequest != Request)
+                {
+                    Assert.Fail("Request of an app not matched");
+                }
+                if (portalImpression != Impression)
+                {
+                    Assert.Fail("Impression of an app not matched");
+                }
+                if (clickPortal != Click)
+                {
+                    Assert.Fail("Click of an app not matched");
+                }
+                if (FillratePortal != fillrateDb)
+                {
+                    Assert.Fail("Fillrate of an app not matched");
+                }
+                if (CTRPortal != CTRDb)
+                {
+                    Assert.Fail("ctr of an app not matched");
+                }
+                /*  if (revenuePortal != revenue)
+                  {
+                      Assert.Fail("revenue of an app not matched");
+                  }*/
+
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("App stats are not matching" + e.Message);
+            }
+
+        }
+
+        internal IWebElement FindAndClickApplybtnApp()
+        {
+
+            try
+            {
+                Thread.Sleep(4000); Thread.Sleep(4000);
+                // return window.FindElement(By.XPath("//button[@class='applyBtn btn btn-sm btn-success']"));
+                return window.FindElement(By.CssSelector("body.page-header-fixed.page-sidebar-fixed.page-sidebar-closed-hide-logo.page-content-white.page-sidebar-closed:nth-child(2) div.daterangepicker.dropdown-menu.ltr.show-calendar.opensright:nth-child(15) div.ranges:nth-child(1) div.range_inputs:nth-child(2) > button.applyBtn.btn.btn-sm.btn-success"));
+            }
+            catch (Exception e)
+            {
+                Assert.Fail("Apply Button not found" + " " + e.Message);
+            }
+            return null;
+        }
+
         internal IWebElement FindCrossPromotionCampaignSearchField(string searchValue)
         {
             try
@@ -2783,7 +3045,7 @@ namespace Monetization_Automation.Page.Home.Map
                 IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
                 js.ExecuteScript(script);
                 AppManageTableValues.tableValues[0] = (string)js.ExecuteScript(script);
-                String AppTitleAndPackage = AppManageTableValues.tableValues[0].Replace("\r", "").Replace("\n", "").Replace("(","").Replace(")","");
+                String AppTitleAndPackage = AppManageTableValues.tableValues[0].Replace("\r", "").Replace("\n", "").Replace("(", "").Replace(")", "");
                 script = "var table = document.getElementById('employee-grid');var children = table.rows;var text = children[1].cells[7].innerText; return text;";
                 AppManageTableValues.tableValues[1] = (string)js.ExecuteScript(script);
                 string portalImpression = AppManageTableValues.tableValues[1].Replace(",", "");
@@ -2824,11 +3086,15 @@ namespace Monetization_Automation.Page.Home.Map
                 var fillrateroundoff = Math.Round(fillratedouble, 3);
                 string fillratestring = fillrateroundoff.ToString();
                 string ctr = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][14].ToString());
-                var ctrdouble= Convert.ToDouble(ctr);
+                var ctrdouble = Convert.ToDouble(ctr);
                 var ctrroundoff = Math.Round(ctrdouble, 3);
                 string ctrstring = ctrroundoff.ToString();
                 string ver = (AppManageTableValues.dataSetPropertyFill[0].Tables[0].Rows[0][15].ToString());
-                if (AppTitleAndPackage != (Title+package))
+                if (fillrateroundoff > 100)
+                {
+                    fillratestring = "100";
+                }
+                if (AppTitleAndPackage != (Title + package))
                 {
                     Assert.Fail("App name not matched");
                 }
@@ -2844,10 +3110,10 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     Assert.Fail("ctr of an app not matched");
                 }
-              /*  if (revenuePortal != revenue)
-                {
-                    Assert.Fail("revenue of an app not matched");
-                }*/
+                /*  if (revenuePortal != revenue)
+                  {
+                      Assert.Fail("revenue of an app not matched");
+                  }*/
                 if (version != ver)
                 {
                     Assert.Fail("ver of an app not matched");
@@ -2857,8 +3123,8 @@ namespace Monetization_Automation.Page.Home.Map
             {
                 Assert.Fail("App stats are not matching" + e.Message);
             }
-
         }
+
 
          internal void Comparestats()
           {

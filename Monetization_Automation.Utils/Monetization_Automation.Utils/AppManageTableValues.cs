@@ -11,7 +11,7 @@ namespace Monetization_Automation.Utils
 {
     public class AppManageTableValues
     {
-        public static string[] tableValues = new string[6];
+        public static string[] tableValues = new string[8];
         public static DataSet[] dataSetPropertyFill = new DataSet[15];
         public static string[] queryArray = new string[10];
         public static string[] tableArray= new string[6];

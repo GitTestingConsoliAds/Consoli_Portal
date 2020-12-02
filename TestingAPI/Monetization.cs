@@ -60,13 +60,48 @@ namespace Monetization_Automation.Test
         /// Login test method to site.
         /// </summary>
         /// 
-       /* public void Create_Cross_Promoation_Campaign_Scenario()
-        { }*/
+        /* public void Create_Cross_Promoation_Campaign_Scenario()
+         { }*/
+
+        [TestMethod]
+        public void BS_Monetization_stats_Publisher_side()
+        {
+            Monetization_App_Management();
+            TS_Monetization_App_Manage_Apps_stats();
+            TS_Monetization_App_AdsStats();
+            TS_Monetization_App_Logout();
+        }
+
+        public void TS_Monetize_Dynamic_filter_App()
+        {
+            //   Monetization_App_Management();
+            // homePageMonetization.ClickRevenueLink();
+            homePageMonetization.ClickDateFilter();
+            homePageMonetization.ClickStartdatefilter(Utils.ExcelUtil.ReadData(1, "StartDate"));
+            homePageMonetization.ClickEnddatefilterApp(Utils.ExcelUtil.ReadData(1, "EndDate"));
+            homePageMonetization.ClickApplyBtnApp();
+            homePageMonetization.ClickFilterSubmitBtn();
+        }
+
+        public void TS_Monetization_App_AdsStats()
+        {
+            homePageMonetization.ClickManageTab();
+            homePageMonetization.SearchRequiredApplicationForStats();
+            homePageMonetization.ClickSearchedApp();
+            Extension.CaptureScreenShot("SearchedApp");
+            homePageMonetization.ClickAppAdsStatsTab();
+            Extension.CaptureScreenShot("AppAdsStatsTab");
+            TS_Monetize_Dynamic_filter_App();
+            homePageMonetization.SearchRequiredScene();
+            homePageMonetization.CompareStatsOfAnAppAdsStatsTab();
+            homePageMonetization.SearchRequiredAdnetwork();
+            homePageMonetization.CompareStatsOfAnAppAdnetworkStats();
+            //  DriverProperty.driver.Close();
 
 
+        }
 
-        
-         public void TS_Login_Monetization()
+        public void TS_Login_Monetization()
          {
             loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
             loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
@@ -397,7 +432,6 @@ namespace Monetization_Automation.Test
        
         public void TS_Monetization_App_Manage_Apps_stats()
         {
-            Monetization_App_Management();
             homePageMonetization.ClickApps();
             homePageMonetization.ClickManageTab();
             TS_Monetize_Dynamic_filter();
@@ -426,7 +460,7 @@ namespace Monetization_Automation.Test
         {
             homePageMonetization.ClickUserName();
             homePageMonetization.ClickLogOutButton();
-
+            DriverProperty.driver.Quit();
         }
 
         [TestMethod]
