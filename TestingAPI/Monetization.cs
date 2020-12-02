@@ -64,7 +64,7 @@ namespace Monetization_Automation.Test
          { }*/
 
         [TestMethod]
-        public void BS_Monetization_stats_Publisher_side()
+        public void C_BS_Monetization_stats_Publisher_side()
         {
             Monetization_App_Management();
             TS_Monetization_App_Manage_Apps_stats();
