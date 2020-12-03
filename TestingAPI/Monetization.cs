@@ -63,6 +63,7 @@ namespace Monetization_Automation.Test
         /* public void Create_Cross_Promoation_Campaign_Scenario()
          { }*/
 
+
         [TestMethod]
         public void C_BS_Monetization_stats_Publisher_side()
         {
@@ -105,7 +106,6 @@ namespace Monetization_Automation.Test
          {
             loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
             loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
-            Extension.DeleteOldFilesFolder();
             Extension.CaptureScreenShot("LoginScreen");
              /* loginPageMonetization.ClickRegisterButton();
               loginPageMonetization.ClickFullNameForRegisteration();
@@ -466,7 +466,7 @@ namespace Monetization_Automation.Test
         [TestMethod]
         public void A_BS_Monetization_Advertiser_Flow()
         {
-            
+            Extension.DeleteOldFilesFolder();
             Monetization_App_Management();
             TS_Monetization_Not_Intergrated_CrossPromotion_Campaign_Creation();
             TS_Monetization_Not_Intergrated_Network_Advertising_Campaign_Creation();

@@ -43,12 +43,14 @@ namespace Monetization_Automation.Page.Home.Page
           {
               Thread.Sleep(2000);
               Map.FindAndClickBrand();
+            Extension.CaptureScreenShot("ClickBrand");
               return this;
           }
           public HomePage ClickNewBrandBtn()
           {
               Thread.Sleep(3000);
               Map.FindAndClickBrandBtn().Click();
+            Extension.CaptureScreenShot("ClickNewBrandButton");
               return this;
           }
           public HomePage FillBrandNameField()
@@ -100,13 +102,15 @@ namespace Monetization_Automation.Page.Home.Page
                  Thread.Sleep(2000);
                  Map.FindAppStoreMoreAppsURL().Click();
                  Map.FindAppStoreMoreAppsURL().SendKeys(ExcelUtil.ReadData(1, "AppStoreMoreAppsURL"));
-                 return this;
+            Extension.CaptureScreenShot("AllbrandDetailsFilled");    
+            return this;
              }
              public HomePage ClickSaveBtn()
              {
 
                  Thread.Sleep(2000);
                  Map.FindAndClickSaveBtn().Click();
+            Extension.CaptureScreenShot("Saved");
                  return this;
              }
         /*  public HomePage Editbrand()
@@ -119,13 +123,15 @@ namespace Monetization_Automation.Page.Home.Page
            {
              Thread.Sleep(2000);
              Map.FindAndClickNewApp();
+            Extension.CaptureScreenShot("ClickNewApp");
              return this;
            }
          public HomePage ClickCreateManuallybtn()
          {
              Thread.Sleep(2000);
              Map.FindAndClickCreateManuallyButton();
-             return this;
+            Extension.CaptureScreenShot("ClickAddAppManualButton");
+            return this;
          }
          public HomePage ClickAppTitle()
          {
@@ -171,7 +177,8 @@ namespace Monetization_Automation.Page.Home.Page
          {
              Thread.Sleep(2000);
              Map.FindAndSelectAppCategory(Categories);
-             return this;
+            Extension.CaptureScreenShot("AppDetailsAdded");
+            return this;
          }
         public HomePage ClickAppNewBrandBtn()
         {
@@ -232,6 +239,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000);
             Map.FindAndClickNewCampaigns();
+            Extension.CaptureScreenShot("NewCampaignButtonClicked");
             return this;
         }
         public HomePage ClickCrossCampaignis(string Campaignis)
@@ -306,6 +314,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000); Thread.Sleep(2000);
             Map.FindAndClickNewbtnofCreatives();
+            Extension.CaptureScreenShot("CreativesAdded");
             return this;
         }
         public HomePage ClickCreativeNameField()
@@ -331,6 +340,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000);
             Map.FindAndClickCreativeCloseBtn();
+            Extension.CaptureScreenShot("CreativeAdded");
             return this;
         }
         public HomePage ClickCampaignPlatform(String Campaign_Platform)
@@ -369,6 +379,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000);
             Map.FindAndClickCampaignSaveBtn().Click();
+            Extension.CaptureScreenShot("CampaignSavedCrosspromoted");
             return this;
         }
         public HomePage ClickAdidSaveBtn()
@@ -399,6 +410,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000);
             Map.FindAndSelectNetworkCampaignType();
+            Extension.CaptureScreenShot("NetworkAdvertisingCampaignRadioButton");
             return this;
         }
         public HomePage selectNetworkCampaignNoBtn()
@@ -648,10 +660,11 @@ namespace Monetization_Automation.Page.Home.Page
             //char[] charsToTrim = {' ','\t' };
             Map.FindAndSelectCrossNotIntegratedCampaign();
             Validator.AssertCampaign("campaign title");
-            
+
             // var RmvSpaces = app.Trim(charsToTrim);
             // var app = Regex.Replace(AppName, "\r\n")[1];
             // Validator.AssertCampaign(CrossPromo);
+            Extension.CaptureScreenShot("Validatedcrosscampaignadded");
             return this; 
         }
         public HomePage ValidateCrossNotIntegratedCampaign()
@@ -693,6 +706,7 @@ namespace Monetization_Automation.Page.Home.Page
         {
             Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000); Thread.Sleep(2000);
             Map.FindAndSearchBrand().SendKeys(AppManageTableValues.SecondCompareValue);
+            Extension.CaptureScreenShot("BrandSearched");
             return this;
         }
         public HomePage SearchBrandTitle()
