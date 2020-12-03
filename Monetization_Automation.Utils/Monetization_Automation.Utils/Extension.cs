@@ -40,11 +40,9 @@ namespace Monetization_Automation.Utils
         public static void CaptureScreenShot(string fileName)
         {
             System.DateTime currentDate = DateTime.Now;
-            string dateFormat = @"MMddyyyy";
-            string timeFormat = @"hhmmss";
             string directoryPath = @"E:\Automation\Monetization_Automation\Montization_Automation\" + "PortalScreenShots";
             Directory.CreateDirectory(directoryPath);
-            var pathToSave = System.IO.Path.Combine(directoryPath, " - " + DateTime.Now.ToString(timeFormat) + fileName + ".jpg");
+            var pathToSave = System.IO.Path.Combine(directoryPath, fileName + ".jpg");
             Screenshot screenShot = ((ITakesScreenshot)DriverProperty.driver).GetScreenshot();
             screenShot.SaveAsFile(pathToSave);
         }
