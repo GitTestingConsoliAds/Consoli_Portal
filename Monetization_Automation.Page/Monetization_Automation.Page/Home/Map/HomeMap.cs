@@ -63,7 +63,6 @@ namespace Monetization_Automation.Page.Home.Map
         {
             try
             {
-               // Extension.HighLighterMethod(window, window.FindElement(By.XPath("//a[@class='btn green-meadow btn-md pull-right']")));
                 return window.FindElement(By.XPath("//a[@class='btn green-meadow btn-md pull-right']"));
             }
             catch (Exception e)
@@ -76,7 +75,6 @@ namespace Monetization_Automation.Page.Home.Map
         {
             try
             {
-                // Extension.HighLighterMethod(window, window.FindElement(By.XPath("//a[@class='btn green-meadow btn-md pull-right']")));
                 return window.FindElement(By.XPath("//input[@id='appleID']"));
             }
             catch (Exception e)
@@ -312,21 +310,18 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Name("os"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("os")));
                     dropDown.SelectByValue("41");
                 }
                 if (platform.Equals("Apple"))
                 {
                     IWebElement selectElement = window.FindElement(By.Name("os"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Name("os")));
                     dropDown.SelectByValue("42");
                 }
                 if (platform.Equals("Amazon"))
                 {
                     IWebElement selectElement = window.FindElement(By.Name("os"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Name("os")));
                     dropDown.SelectByValue("43");
                 }
             }
@@ -345,14 +340,12 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_types"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_types")));
                     dropDown.SelectByValue("game");
                 }
                 if (Apptype.Equals("App"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_types"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_types")));
                     dropDown.SelectByValue("app");
                 }
             }
@@ -371,112 +364,96 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Action");
                 }
                 if (Categories.Equals("Adventure"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Adventure");
                 }
                 if (Categories.Equals("Arcade"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Arcade");
                 }
                 if (Categories.Equals("Board"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                    //Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Board");
                 }
                 if (Categories.Equals("Card"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Card");
                 }
                 if (Categories.Equals("Casino"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Casino");
                 }
                 if (Categories.Equals("Casual"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Casual");
                 }
                 if (Categories.Equals("Educational"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Educational");
                 }
                 if (Categories.Equals("Family"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Family");
                 }
                 if (Categories.Equals("Music"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Music");
                 }
                 if (Categories.Equals("Puzzle"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Puzzle");
                 }
                 if (Categories.Equals("Racing"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Racing");
                 }
                 if (Categories.Equals("Role Playing"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Role Playing");
                 }
                 if (Categories.Equals("Simulation"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Simulation");
                 }
                 if (Categories.Equals("Sports"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Sports");
                 }
                 if (Categories.Equals("Strategy"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Strategy");
                 }
 
@@ -484,7 +461,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Trivia");
                 }
 
@@ -492,7 +468,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Word");
                 }
 
@@ -500,7 +475,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("AR Games");
                 }
 
@@ -508,7 +482,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Cards");
                 }
 
@@ -516,7 +489,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Music and Rhythm");
                 }
 
@@ -524,7 +496,6 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Brain and Puzzle");
                 }
 
@@ -532,343 +503,294 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Sports Games");
                 }
                 if (Categories.Equals("Art & Design"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Action");
                 }
                 if (Categories.Equals("Art & Design"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Action");
                 }
                 if (Categories.Equals("Auto & Vehicles"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Auto & Vehicles");
                 }
                 if (Categories.Equals("Beauty"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Beauty");
                 }
                 if (Categories.Equals("Books & Reference"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Books & Reference");
                 }
                 if (Categories.Equals("Business"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Business");
                 }
                 if (Categories.Equals("Comics"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                   // Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Comics");
                 }
                 if (Categories.Equals("Communication"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Communication");
                 }
                 if (Categories.Equals("Dating"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Dating");
                 }
                 if (Categories.Equals("Education"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Education");
                 }
                 if (Categories.Equals("Entertainment"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Entertainment");
                 }
                 if (Categories.Equals("Events"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Events");
                 }
                 if (Categories.Equals("Finance"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Finance");
                 }
                 if (Categories.Equals("Food & Drink"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Food & Drink");
                 }
                 if (Categories.Equals("Health & Fitness"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Health & Fitness");
                 }
                 if (Categories.Equals("House & Home"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("House & Home");
                 }
                 if (Categories.Equals("Libraries & Demo"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Libraries & Demo");
                 }
                 if (Categories.Equals("Lifestyle"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Lifestyle");
                 }
                 if (Categories.Equals("Maps & Navigation"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Maps & Navigation");
                 }
                 if (Categories.Equals("Medical"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Medical");
                 }
                 if (Categories.Equals("Music & Audio"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Music & Audio");
                 }
                 if (Categories.Equals("News & Magazines"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("News & Magazines");
                 }
                 if (Categories.Equals("Medical"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Medical");
                 }
                 if (Categories.Equals("Parenting"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Parenting");
                 }
                 if (Categories.Equals("Personalization"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Personalization");
                 }
                 if (Categories.Equals("Photography"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Photography");
                 }
                 if (Categories.Equals("Productivity"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Productivity");
                 }
                 if (Categories.Equals("Shopping"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Shopping");
                 }
                 if (Categories.Equals("Social"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Social");
                 }
                 if (Categories.Equals("Tools"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Tools");
                 }
                 if (Categories.Equals("Travel & Local"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Travel & Local");
                 }
                 if (Categories.Equals("Video Players & Editors"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Video Players & Editors");
                 }
                 if (Categories.Equals("Weather"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Weather");
                 }
                 if (Categories.Equals("Medical"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Medical");
                 }
                 if (Categories.Equals("Books"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Books");
                 }
                 if (Categories.Equals("Food and Drink"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Food and Drink");
                 }
                 if (Categories.Equals("Health and Fitness"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Health and Fitness");
                 }
                 if (Categories.Equals("Kids"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Kids");
                 }
                 if (Categories.Equals("Magazines and Newspapers"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Magazines and Newspapers");
                 }
                 if (Categories.Equals("Navigation"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Navigation");
                 }
                 if (Categories.Equals("News"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("News");
                 }
                 if (Categories.Equals("Photo and Video"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Photo and Video");
                 }
                 if (Categories.Equals("Reference"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Reference");
                 }
                 if (Categories.Equals("Social Networkin"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Social Networkin");
                 }
                 if (Categories.Equals("Catalogs"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Catalogs");
                 }
                 if (Categories.Equals("Utilities"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Utilities");
                 }
                 if (Categories.Equals("Books & Comics"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Books & Comics");
                 }
                 if (Categories.Equals("Business & Finance"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Business & Finance");
                 }
                 if (Categories.Equals("City Info"))
@@ -882,77 +804,66 @@ namespace Monetization_Automation.Page.Home.Map
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Cooking");
                 }
                 if (Categories.Equals("Games"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Games");
                 }
                 if (Categories.Equals("Motives"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Motives");
                 }
                 if (Categories.Equals("Novelty"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Novelty");
                 }
                 if (Categories.Equals("Podcasts"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Podcasts");
                 }
                 if (Categories.Equals("Real Estate"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Real Estate");
                 }
                 if (Categories.Equals("Ringtones"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Ringtones");
                 }
                 if (Categories.Equals("Web Browsers"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Web Browsers");
                 }
                 if (Categories.Equals("Book"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Book");
                 }
                 if (Categories.Equals("Photo & Video"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Photo & Video");
                 }
                 if (Categories.Equals("Brain & Puzzle"))
                 {
                     IWebElement selectElement = window.FindElement(By.Id("app_categoryID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Id("app_categoryID")));
                     dropDown.SelectByText("Brain & Puzzle");
                 }
 
@@ -963,23 +874,7 @@ namespace Monetization_Automation.Page.Home.Map
             }
             return null;
         }
-        /*  internal void FindAndClickImportButton()
-          {
-              try
-              {
-                  var script = "jQuery(\"button:contains('Import')\").click();";
-                  IJavaScriptExecutor js = (IJavaScriptExecutor)DriverProperty.driver;
-                  js.ExecuteScript(script);
-                  Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
-                  Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
-                  Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000); Thread.Sleep(1000);
-              }
-              catch (Exception e)
-              {
-                  Assert.Fail("Import button not found" + " " + e.Message);
-              }
-              return;
-          }*/
+
         internal void FindAndSelectEnvironment(string environment)
         {
             try
@@ -1014,7 +909,6 @@ namespace Monetization_Automation.Page.Home.Map
                 Thread.Sleep(3000);
                 IWebElement selectElement = window.FindElement(By.Name("brand"));
                 SelectElement dropDown = new SelectElement(selectElement);
-              //  Extension.HighLighterMethod(window, window.FindElement(By.Name("brand")));
                 dropDown.SelectByText(brand);
             }
             catch (Exception e)
@@ -1033,7 +927,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("1");
                 }
                 if (AgeRating.Equals("EVERYONE 10+"))
@@ -1041,7 +934,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("2");
                 }
                 if (AgeRating.Equals("TEEN"))
@@ -1049,7 +941,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                //    Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("3");
                 }
                 if (AgeRating.Equals("MATURE"))
@@ -1057,7 +948,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("4");
                 }
                 if (AgeRating.Equals("ADULTS ONLY"))
@@ -1065,7 +955,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("5");
                 }
                 if (AgeRating.Equals("PEGI 3"))
@@ -1073,7 +962,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("6");
                 }
                 if (AgeRating.Equals("PEGI 7"))
@@ -1081,7 +969,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("7");
                 }
                 if (AgeRating.Equals("PEGI 12"))
@@ -1089,7 +976,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("8");
                 }
                 if (AgeRating.Equals("PEGI 16"))
@@ -1097,7 +983,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("9");
                 }
                 if (AgeRating.Equals("PEGI 18"))
@@ -1105,7 +990,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("10");
                 }
                 if (AgeRating.Equals("PARENTAL GUIDANCE RECOMMENDED"))
@@ -1113,7 +997,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("11");
                 }
                 if (AgeRating.Equals("USK: Ages 6 and above"))
@@ -1121,7 +1004,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("12");
                 }
                 if (AgeRating.Equals("USK: Ages 12 and above"))
@@ -1129,7 +1011,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                 //   Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("13");
                 }
                 if (AgeRating.Equals("USK: Ages 16 and above"))
@@ -1137,7 +1018,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("14");
                 }
                 if (AgeRating.Equals("USK: Ages 18 and above"))
@@ -1145,7 +1025,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("15");
                 }
                 if (AgeRating.Equals("General"))
@@ -1153,7 +1032,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("16");
                 }
                 if (AgeRating.Equals("Parental Guidance"))
@@ -1161,7 +1039,6 @@ namespace Monetization_Automation.Page.Home.Map
                     Thread.Sleep(3000);
                     IWebElement selectElement = window.FindElement(By.Name("sel_ageRatingID"));
                     SelectElement dropDown = new SelectElement(selectElement);
-                  //  Extension.HighLighterMethod(window, window.FindElement(By.Name("sel_ageRatingID")));
                     dropDown.SelectByValue("17");
                 }
                 if (AgeRating.Equals("Restricted"))

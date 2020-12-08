@@ -75,8 +75,6 @@ namespace Monetization_Automation.Test
 
         public void TS_Monetize_Dynamic_filter_App()
         {
-            //   Monetization_App_Management();
-            // homePageMonetization.ClickRevenueLink();
             homePageMonetization.ClickDateFilter();
             homePageMonetization.ClickStartdatefilter(Utils.ExcelUtil.ReadData(1, "StartDate"));
             homePageMonetization.ClickEnddatefilterApp(Utils.ExcelUtil.ReadData(1, "EndDate"));
@@ -97,34 +95,17 @@ namespace Monetization_Automation.Test
             homePageMonetization.CompareStatsOfAnAppAdsStatsTab();
             homePageMonetization.SearchRequiredAdnetwork();
             homePageMonetization.CompareStatsOfAnAppAdnetworkStats();
-            //  DriverProperty.driver.Close();
-
-
         }
 
         public void TS_Login_Monetization()
          {
             loginPageMonetization = PageFactory.Create<LoginPage, LoginMap, LoginValidator>(null, false, false, true, false);
             loginPageMonetization.NavigateUrl(Utils.ExcelUtil.ReadData(1, "URL"));
-            Extension.CaptureScreenShot("LoginScreen");
-             /* loginPageMonetization.ClickRegisterButton();
-              loginPageMonetization.ClickFullNameForRegisteration();
-              loginPageMonetization.ClickCompanyName();
-              loginPageMonetization.EnterUserId();
-              loginPageMonetization.EnterPassword();
-              loginPageMonetization.ClickConfirmPassword();
-              loginPageMonetization.ClickPhoneNumberField();
-              loginPageMonetization.SelectPrimaryRole();
-              loginPageMonetization.SelectCountry();
-              loginPageMonetization.SelectHearAboutUs();
-              loginPageMonetization.SelectTermsAndConditionRadioBtn();
-            //loginPageMonetization.ClickCaptcha();*/
-
+            Extension.CaptureScreenShot("1_LoginScreen");
               loginPageMonetization.EnterUserId();
               loginPageMonetization.EnterPassword();
               loginPageMonetization.ClickSubmitButton();
-            Extension.CaptureScreenShot("SuccessfullyLoggedinHomeWindow");
-            //  loginPageMonetization.ValidateLoggedInUserName();
+            Extension.CaptureScreenShot("2_SuccessfullyLoggedinHomeWindow");
           }
 
         //Navigation and opening application
@@ -150,10 +131,7 @@ namespace Monetization_Automation.Test
                 homePageMonetization.ClickSaveBtn();
                 homePageMonetization.ClickBrand();
                 homePageMonetization.SearchBrand();
-              // homePageMonetization.ValidateBrand();
                 homePageMonetization.ValidateBrandtitle();
-                
-              //  homePageMonetization.
             }
    
         public void TS_Monetization_EditBrand()
@@ -191,7 +169,6 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickPackageName();
             homePageMonetization.ClickEnvironmentRdbtn(Utils.ExcelUtil.ReadData(1, "App_Environment"));
             homePageMonetization.SelectPlatform(Utils.ExcelUtil.ReadData(1, "Platfrom"));
-        //    homePageMonetization.InsertAmazonASINORAppleID();
             homePageMonetization.SelectAppType(Utils.ExcelUtil.ReadData(1, "App_AppType"));
             homePageMonetization.SelectAppCategory(Utils.ExcelUtil.ReadData(1, "App_AppCategory"));
             homePageMonetization.ClickAppNewBrandBtn();
@@ -202,13 +179,10 @@ namespace Monetization_Automation.Test
             homePageMonetization.FillAmazonMoreAppsURLField();
             homePageMonetization.FillAppStoreMoreAppsURL();
             homePageMonetization.ClickSaveBtn();
-            //homePageMonetization.SelectBrand();
             homePageMonetization.SelectAgeRating(Utils.ExcelUtil.ReadData(1, "App_AgeRating"));
-            //     homePageMonetization.ClickAppCreateButton();
             homePageMonetization.ClickAppSaveBtn();
             homePageMonetization.clickAppsManagement();
             homePageMonetization.SearchRequiredApplication();
-            //homePageMonetization.ValidateAppName();
             homePageMonetization.ValidateApp();
       
         }
@@ -226,12 +200,9 @@ namespace Monetization_Automation.Test
         }
 
 
-        
+        //CROSS PROMOTIOM NON INTEGRATED CAMPAIGN CREATION:
         public void TS_Monetization_Not_Intergrated_CrossPromotion_Campaign_Creation()
         {
-
-            //CROSS PROMOTIOM NON INTEGRATED CAMPAIGN CREATION:
-           
             homePageMonetization.ClickPromotesSection();
             Extension.CaptureScreenShot("3_promotesection");
             homePageMonetization.ClickNewCampaignBtn();
@@ -243,21 +214,18 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickNotIntegratedCrossCampaignTitleField();
             homePageMonetization.ClickNotIntCrossCampaignBrandAddNewBtn();
             homePageMonetization.InsertCampaignBrandTitleName();
-            Extension.CaptureScreenShot("Brand Details");
+            Extension.CaptureScreenShot("5_Brand Details");
             homePageMonetization.ClickCampaignBrandSaveBtn();
-            Extension.CaptureScreenShot("Brand Details Added and Saved");
+            Extension.CaptureScreenShot("6_Brand Details Added and Saved");
             homePageMonetization.ClickCampaignAdOkBtn();
-            Extension.CaptureScreenShot("5_CamapaignCreated");
+            Extension.CaptureScreenShot("7_CamapaignCreated");
             homePageMonetization.ClickCampaignBrandCloseBtn();
-            // homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
             homePageMonetization.ClickNotIntCampaignAdAddNewBtn();
             homePageMonetization.InsertCampaignAdTitleName();
             homePageMonetization.ClickCampaignAdSaveBtn();
             homePageMonetization.ClickCampaignAdOkBtn();
-           // homePageMonetization.ClickCampaignAdUrl();
             homePageMonetization.SelectCampaignAttribution(Utils.ExcelUtil.ReadData(1, "Campaign_Attribution"));
             homePageMonetization.SelectCampaignClickUrl();
-           //homePageMonetization.ClickCampaignAdName();
             homePageMonetization.ClickCampaignPlatform(Utils.ExcelUtil.ReadData(1, "Platfrom"));
             homePageMonetization.SelectCampaignRegions();
             homePageMonetization.SelectCampaignPriority(Utils.ExcelUtil.ReadData(1, "Campaign_Priority"));
@@ -270,13 +238,12 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickNewBtnofCreatives();
             homePageMonetization.ClickCreativeNameField();
             homePageMonetization.ClickChooseCreatives(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
-            Extension.CaptureScreenShot("creatives and other details saved");
+            Extension.CaptureScreenShot("8_creatives and other details saved");
             homePageMonetization.ClickCampaigncreativeSaveBtn();
             homePageMonetization.ClickCreativeCloseBtn();
             homePageMonetization.selectCreativeSet(ExcelUtil.ReadData(1, "Campaign_creatives"));
             homePageMonetization.ScrollToSave();
             homePageMonetization.ClickCampaignSaveBtn();
-          //  homePageMonetization.ClickCampaignAdOkBtn();
             homePageMonetization.SearchCrossNotIntCampaign();
             homePageMonetization.ValidateCrossNotIntegratedCampaign();
             
@@ -286,18 +253,16 @@ namespace Monetization_Automation.Test
         //NETWORK NON INTEGRATED CAMPAIGN CREATION:
         {
             homePageMonetization.ClickNewCampaignBtn();
-            Extension.CaptureScreenShot("Network Adveritising Campagin");
+            Extension.CaptureScreenShot("9_Network Adveritising Campagin");
             homePageMonetization.selectNetworkCampaignRadioBtn();
             homePageMonetization.selectNetworkCampaignNoBtn();
             homePageMonetization.SelectCampaignAdType(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
             homePageMonetization.ClickNotIntegratedNetworkCampaignTitleField();
             homePageMonetization.ClickNotIntCampaignBrandAddNewBtn();
             homePageMonetization.InsertCampaignBrandTitleName();
-            Extension.CaptureScreenShot("Campaign details added");
+            Extension.CaptureScreenShot("10_Campaign details added");
             homePageMonetization.ClickCampaignBrandSaveBtn();
             homePageMonetization.ClickCampaignAdOkBtn();
-       //     homePageMonetization.ClickCampaignBrandCloseBtn();
-          //  homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
             homePageMonetization.ClickNotIntAdvertisingCampaignAdAddNewBtn();
             homePageMonetization.InsertCampaignAdTitleName();
             homePageMonetization.ClickCampaignAdSaveBtn();
@@ -324,10 +289,10 @@ namespace Monetization_Automation.Test
             homePageMonetization.ValidateNetworkNotIntegratedCampaign();
             
         }
-        
+
+        //CROSS PROMOTION INTEGRATED CAMPAIGN:
         public void TS_Monetization_Integrated_CrossPromotion_Campaign_Creation() {
 
-            //CROSS PROMOTION INTEGRATED CAMPAIGN:
             homePageMonetization.ClickNewCampaignBtn();
             homePageMonetization.ClickCampaignType();
             homePageMonetization.ClickIntegratedCrosspromoCampaign();
@@ -335,7 +300,6 @@ namespace Monetization_Automation.Test
             homePageMonetization.SelectCampaignAdType(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
             homePageMonetization.ClickIntegratedCrossCampaignTitleField();
             homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
-             //homePageMonetization.ClickCampaignPromotingField();
             homePageMonetization.SelectCampaignPromotingApp(Utils.ExcelUtil.ReadData(1, "Campaign_PromotingApp"));
             homePageMonetization.SelectCampaignRegions();
             homePageMonetization.ClickCampaignPublishIn(Utils.ExcelUtil.ReadData(1, "Campaign_Publish_In"));
@@ -357,15 +321,14 @@ namespace Monetization_Automation.Test
 
         }
 
+        //NETWORK ADV INTEGRATED CAMPAIGN:
         public void TS_Monetization_Intergrated_Network_Advertising_Campaign_Creation() {
-            //NETWORK ADV INTEGRATED CAMPAIGN:
             homePageMonetization.ClickNewCampaignBtn();
             homePageMonetization.selectNetworkCampaignRadioBtn();
             homePageMonetization.ClickNetworkIntegratedCampaign();
             homePageMonetization.SelectCampaignAdType(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
             homePageMonetization.ClickIntegratedNetworkCampaignTitleField();
             homePageMonetization.ClickCampaignBrandField(Utils.ExcelUtil.ReadData(1, "Campaign_brand"));
-            // homePageMonetization.ClickCampaignPromotingField();
             homePageMonetization.SelectCampaignPromotingApp(Utils.ExcelUtil.ReadData(1, "Campaign_PromotingApp"));
             homePageMonetization.ClickCampaignSelectCategoriesBtn();
             homePageMonetization.SelectCampaignCategories(Utils.ExcelUtil.ReadData(1, "Campaign_Categories"));
@@ -373,7 +336,6 @@ namespace Monetization_Automation.Test
             homePageMonetization.SelectCampaignDailyImpressionPerUserCap();
             homePageMonetization.SelectCampaignRegions();
             homePageMonetization.ClickNewBtnofCreatives();
-          //  homePageMonetization.ClickCreativeNameField();
             homePageMonetization.ClickChooseCreatives(Utils.ExcelUtil.ReadData(1, "Campaign_Adtype"));
             homePageMonetization.ClickCampaigncreativeSaveBtn();
             homePageMonetization.ClickCreativeCloseBtn();
@@ -386,7 +348,6 @@ namespace Monetization_Automation.Test
             homePageMonetization.ClickCampaignSaveBtn();
             homePageMonetization.SearchNetworkIntCampaign();
             homePageMonetization.ValidateNetworkIntegratedCampaign();
-            
         }
        
         public void TS_Monetization_User_creation() {
@@ -421,14 +382,10 @@ namespace Monetization_Automation.Test
             // Create Users
             Monetization_App_Management();
             homePageMonetization.ClickUsersLink();
-           // homePageMonetization.SeachUser();
             homePageMonetization.DeleteUser();
             homePageMonetization.ClickBrandStatusYesBtn();
 
         }
-        // homePageMonetization.Editbrand();
-
-        //Apps Manage Stats
        
         public void TS_Monetization_App_Manage_Apps_stats()
         {
@@ -438,6 +395,7 @@ namespace Monetization_Automation.Test
             homePageMonetization.SearchRequiredApplicationForStats();
             homePageMonetization.CompareStatsofAnApp();
         }
+
         public void TS_Monetization_Date_Filter()
         {
             homePageMonetization.ClickDateFilter();
@@ -447,8 +405,6 @@ namespace Monetization_Automation.Test
        
         public void TS_Monetize_Dynamic_filter()
         {
-         //   Monetization_App_Management();
-           // homePageMonetization.ClickRevenueLink();
             homePageMonetization.ClickDateFilter();
             homePageMonetization.ClickStartdatefilter(Utils.ExcelUtil.ReadData(1, "StartDate"));
             homePageMonetization.ClickEnddatefilter(Utils.ExcelUtil.ReadData(1, "EndDate"));
@@ -484,22 +440,13 @@ namespace Monetization_Automation.Test
            TS_Monetization_App_Logout();
         }
 
-        //comparerevenueTab:
-
         public void TS_Monetization_Revenue_stats()
         {
             Monetization_App_Management();
             homePageMonetization.ClickRevenueLink();
-          //homePageMonetization.CompareTopGridStats();
             TS_Monetize_Dynamic_filter(); 
-           // homePageMonetization.ClickAppButtonOfRevenueTab();
-           // homePageMonetization.CompareBottomGridAppWiseStats();
-           // homePageMonetization.ClickDateButtonOfRevenueTab();
-           // homePageMonetization.CompareBottomGridDateWiseStats();
             homePageMonetization.ClickNetworkButtonOfRevenueTab();
             homePageMonetization.CompareBottomGridNetworkWiseStats();
-
-            //   homePageMonetization.comparestats();
         }
    
         public void TS_Monetization_App_Edit()
@@ -530,96 +477,11 @@ namespace Monetization_Automation.Test
             homePageMonetization.clickAppsManagement();
             homePageMonetization.SearchRequiredApplicationtoEdit();
             homePageMonetization.ClickSearchedApp();
-          /*  homePageMonetization.ImportApp();
-            homePageMonetization.ClickChildDirectedToggle();
-            homePageMonetization.ClickDebugDirectedToggle();
-            homePageMonetization.ClickAppCustomIcon();
-            homePageMonetization.ClickAppUploadIcon();
-            homePageMonetization.MoveToAdnetworks();
-            //Adids updation
-           /* homePageMonetization.ClickAdnetworksTab();
-            homePageMonetization.ClickAdmobAdidsBtn();
-            homePageMonetization.InsertAdmobAdIds();
-            homePageMonetization.ClickAdidSaveBtn();
-            homePageMonetization.ClickAdidCloseBtn();
-            homePageMonetization.ClickChartboostAdidsBtn();
-            homePageMonetization.InsertChartboostAdIds();
-            homePageMonetization.ClickAdidSaveBtn();
-            homePageMonetization.ClickAdidCloseBtn();
-            homePageMonetization.ClickFacebookAdidsBtn();
-            homePageMonetization.InsertFacebookAdIds();
-            homePageMonetization.ClickAdidSaveBtn();
-            homePageMonetization.ClickAdidSaveBtn();*/
-            //Placeholders&Ads tab
             homePageMonetization.ClickPlaceholdersAddAdsTab();
-         /*   homePageMonetization.ClickIsSkipAbleOnToggle();
-            homePageMonetization.ClickIsSkipAbleOffToggle();
-            homePageMonetization.ClickHideAdsOnToggle();
-            homePageMonetization.ClickHideAdsOffToggle();
-            homePageMonetization.ClickTestModeOnToggle();
-            homePageMonetization.ClickTestModeOffToggle();*/
-           // homePageMonetization.SelectAdMechanism(Utils.ExcelUtil.ReadData(1, "Admechanism"));
-         //   homePageMonetization.SelectAppAdType(Utils.ExcelUtil.ReadData(1, "Adtype"));
-       //     homePageMonetization.ClickPlaceholderNameOFAdnetwork();
-            // homePageMonetization.ClickNewAdBtnOfAdnetwork();
-            // homePageMonetization.SelectAdTitleField();
-            // homePageMonetization.SelectAdRegionField(Utils.ExcelUtil.ReadData(1, "AdRegion"));
-            // homePageMonetization.InsertPriorityValue();
-            // homePageMonetization.ClickNewAdSaveBtn();
-            // homePageMonetization.DeleteAdnetwork();
-            //  homePageMonetization.ClickYesDeleteItBtn();
-            //    homePageMonetization.ClickEditBtnOfAdnetwork();
-            //  homePageMonetization.ClickEditBtnOfScene();
-            //    homePageMonetization.SelectSizeOfBanner(Utils.ExcelUtil.ReadData(1, "BannerSize"));
-            //   homePageMonetization.SelectPositionOfBanner(Utils.ExcelUtil.ReadData(1, "BannerPosition"));
-            // homePageMonetization.SelectSceneActionSaveBtn();
-            //  homePageMonetization.ClickNativeHeightField();
-            //  homePageMonetization.ClickNativeWidthField();
-            //     homePageMonetization.SelectSceneActionSaveBtn();
-            //  homePageMonetization.SelectIconSize(Utils.ExcelUtil.ReadData(1, "IconSize"));
-            //  homePageMonetization.SelectSceneActionSaveBtn();
-            // homePageMonetization.ClickEditBtnOfSceneOFInterstitial();
-            // homePageMonetization.ClickFirstSkipBtn();
-            // homePageMonetization.SelectFailOverAd(Utils.ExcelUtil.ReadData(1, "FailOverAd"));
-            // homePageMonetization.SelectSceneActionSaveBtn();
             homePageMonetization.ClickDevPlaceHoldersAndAdsBtn();
             homePageMonetization.ClickIsSkipAbleOnToggle();
             homePageMonetization.SelectAdMechanism(Utils.ExcelUtil.ReadData(1, "Admechanism"));
             homePageMonetization.SelectAppAdType(Utils.ExcelUtil.ReadData(1, "Adtype"));
-
-
-            /*   homePageMonetization.ClickAutoMediationOnToggle();
-               homePageMonetization.ClickAutoMediationYesBtn();
-               homePageMonetization.ClickAutoMediationOkBtn();
-               homePageMonetization.ClickAutoMediationOffToggle();
-               homePageMonetization.ClickAutoMediationYesBtn();
-               homePageMonetization.ClickAutoMediationOkBtn();*/
-
         }
-
-
-        // homePageMonetization.ClickAdNework();
-        // homePageMonetization.ClickAdFilter();
-        // homePageMonetization.SelectAddNetwork();
-        // homePageMonetization.SelectAdContentCheckBox();
-        // homePageMonetization.ClickSaveButton();
-        // homePageMonetization.ClickPlaceholdersAndAds();
-        // homePageMonetization.SelectShowAdMechanism();
-        // homePageMonetization.SelectAdType();
-        ///  homePageMonetization.SelectApplication();
-        //  homePageMonetization.ClickMediatoinTab();*/
-        //Thread.Sleep(2000);
     }
-
-        //Launching desktop application
-      /*  [TestMethod]
-        public void LaunchNotepad()
-        {
-            LoginWindows = PageFactory.Create<ModulePage, ModuleMap, ModuleValidator>(null, true, true, false, false);
-            LoginWindows.ClickFileButton();
-            Thread.Sleep(3000);
-        }*/
-
-
-    
 }
