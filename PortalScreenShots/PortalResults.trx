@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<TestRun id="413d1c4f-5d7a-4598-9e41-848c89fe9da4" name="SYSTEM@DESKTOP-5AJ0SB3 2020-12-08 16:04:30" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
-  <TestSettings name="Default Test Settings" id="941dc493-10cb-4dbb-a825-7608426a57f8">
-    <Deployment userDeploymentRoot="E:\Automation\Monetization_Automation\Montization_Automation\PortalScreenShots" useDefaultDeploymentRoot="false" runDeploymentRoot="SYSTEM_DESKTOP-5AJ0SB3 2020-12-08 16_04_30" />
+<TestRun id="8c2855f7-5126-4904-8cdb-e1c9a191b1d0" name="SYSTEM@DESKTOP-5AJ0SB3 2020-12-09 15:43:08" runUser="NT AUTHORITY\SYSTEM" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Default Test Settings" id="f1f9734a-0f2c-40b6-81d2-9a003a155ec1">
+    <Deployment userDeploymentRoot="E:\Automation\Monetization_Automation\Montization_Automation\PortalScreenShots" useDefaultDeploymentRoot="false" runDeploymentRoot="SYSTEM_DESKTOP-5AJ0SB3 2020-12-09 15_43_08" />
     <Execution>
       <TestTypeSpecific />
       <AgentRule name="Execution Agents">
@@ -9,21 +9,21 @@
     </Execution>
     <Properties />
   </TestSettings>
-  <Times creation="2020-12-08T16:04:30.8025943+05:00" queuing="2020-12-08T16:04:31.6922849+05:00" start="2020-12-08T16:04:31.8276637+05:00" finish="2020-12-08T16:34:58.3847928+05:00" />
-  <ResultSummary outcome="Completed">
-    <Counters total="3" executed="3" passed="3" error="0" failed="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+  <Times creation="2020-12-09T15:43:08.2010395+05:00" queuing="2020-12-09T15:43:09.4903037+05:00" start="2020-12-09T15:43:09.6282257+05:00" finish="2020-12-09T16:08:49.6420639+05:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="3" executed="3" passed="2" error="0" failed="1" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
   </ResultSummary>
   <TestDefinitions>
     <UnitTest name="B_BS_Monetization_Both_publisheradvertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="7269b8df-ed72-628d-b9c8-9ff9f828465f">
-      <Execution id="f5c4b0ae-69b1-4e32-af02-6ca63446ffea" />
+      <Execution id="c6ced689-c6d8-4c58-82f3-5326b7ee373d" />
       <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="B_BS_Monetization_Both_publisheradvertiser_Flow" />
     </UnitTest>
     <UnitTest name="C_BS_Monetization_stats_Publisher_side" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="7024d843-e31e-b0fc-e84e-64806fdd8afc">
-      <Execution id="cf85c033-b941-4352-86d9-532dd36312a0" />
+      <Execution id="d6f2dfa9-26df-4b22-9c75-f4a786a44db5" />
       <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="C_BS_Monetization_stats_Publisher_side" />
     </UnitTest>
     <UnitTest name="A_BS_Monetization_Advertiser_Flow" storage="e:\automation\monetization_automation\montization_automation\testingapi\bin\debug\monetization_automation.test.dll" id="b23dfb95-77c5-d445-6682-37cb15ba83e2">
-      <Execution id="b4f6b829-5eea-4bce-b331-b4c34dc7f491" />
+      <Execution id="a69a0be5-c54c-4ae1-bfab-16e6c8573d59" />
       <TestMethod codeBase="E:/Automation/Monetization_Automation/Montization_Automation/TestingAPI/bin/Debug/Monetization_Automation.Test.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=16.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="Monetization_Automation.Test.Monetization, Monetization_Automation.Test, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="A_BS_Monetization_Advertiser_Flow" />
     </UnitTest>
   </TestDefinitions>
@@ -32,12 +32,12 @@
     <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
   </TestLists>
   <TestEntries>
-    <TestEntry testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" executionId="b4f6b829-5eea-4bce-b331-b4c34dc7f491" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" executionId="f5c4b0ae-69b1-4e32-af02-6ca63446ffea" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
-    <TestEntry testId="7024d843-e31e-b0fc-e84e-64806fdd8afc" executionId="cf85c033-b941-4352-86d9-532dd36312a0" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" executionId="a69a0be5-c54c-4ae1-bfab-16e6c8573d59" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" executionId="c6ced689-c6d8-4c58-82f3-5326b7ee373d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="7024d843-e31e-b0fc-e84e-64806fdd8afc" executionId="d6f2dfa9-26df-4b22-9c75-f4a786a44db5" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
   </TestEntries>
   <Results>
-    <UnitTestResult executionId="b4f6b829-5eea-4bce-b331-b4c34dc7f491" testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" testName="A_BS_Monetization_Advertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:10:48.7820825" startTime="2020-12-08T16:04:31.9685828+05:00" endTime="2020-12-08T16:15:21.4680870+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="b4f6b829-5eea-4bce-b331-b4c34dc7f491">
+    <UnitTestResult executionId="a69a0be5-c54c-4ae1-bfab-16e6c8573d59" testId="b23dfb95-77c5-d445-6682-37cb15ba83e2" testName="A_BS_Monetization_Advertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:10:54.3226186" startTime="2020-12-09T15:43:09.7751420+05:00" endTime="2020-12-09T15:54:04.7364852+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="a69a0be5-c54c-4ae1-bfab-16e6c8573d59">
       <Output>
         <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
 ****************** 1ali.irshad@mizostudio.com
@@ -80,7 +80,7 @@
 </DebugTrace>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="f5c4b0ae-69b1-4e32-af02-6ca63446ffea" testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" testName="B_BS_Monetization_Both_publisheradvertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:11:27.9713907" startTime="2020-12-08T16:15:21.4970707+05:00" endTime="2020-12-08T16:26:49.4812016+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="f5c4b0ae-69b1-4e32-af02-6ca63446ffea">
+    <UnitTestResult executionId="c6ced689-c6d8-4c58-82f3-5326b7ee373d" testId="7269b8df-ed72-628d-b9c8-9ff9f828465f" testName="B_BS_Monetization_Both_publisheradvertiser_Flow" computerName="DESKTOP-5AJ0SB3" duration="00:11:43.7084327" startTime="2020-12-09T15:54:04.7454813+05:00" endTime="2020-12-09T16:05:48.4634582+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="c6ced689-c6d8-4c58-82f3-5326b7ee373d">
       <Output>
         <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
 ****************** 1ali.irshad@mizostudio.com
@@ -137,40 +137,28 @@ App titlevalidation is successful
 </DebugTrace>
       </Output>
     </UnitTestResult>
-    <UnitTestResult executionId="cf85c033-b941-4352-86d9-532dd36312a0" testId="7024d843-e31e-b0fc-e84e-64806fdd8afc" testName="C_BS_Monetization_stats_Publisher_side" computerName="DESKTOP-5AJ0SB3" duration="00:08:08.6727835" startTime="2020-12-08T16:26:49.4901964+05:00" endTime="2020-12-08T16:34:58.1699159+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="cf85c033-b941-4352-86d9-532dd36312a0">
+    <UnitTestResult executionId="d6f2dfa9-26df-4b22-9c75-f4a786a44db5" testId="7024d843-e31e-b0fc-e84e-64806fdd8afc" testName="C_BS_Monetization_stats_Publisher_side" computerName="DESKTOP-5AJ0SB3" duration="00:03:00.9473856" startTime="2020-12-09T16:05:48.4664578+05:00" endTime="2020-12-09T16:08:49.4201900+05:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d6f2dfa9-26df-4b22-9c75-f4a786a44db5">
       <Output>
-        <DebugTrace>****************** http://sheeda.consoliads.com/Automation-portal/user/login
-****************** 1ali.irshad@mizostudio.com
-****************** amber123
-****************** 9/1/2020 12:00:00 AM
-****************** 9/30/2020 12:00:00 AM
-****************** Secret Agent FPS Shooting Game
-****************** SELECT * FROM (SELECT c.*, sdk.ver FROM ( SELECT b.*, r.rev revenue,((impression / request) * 100) fill_rate, ((click / impression) * 100) ctr
-FROM( SELECT a.appID, a.title, a.package, a.osID, a.brandID, a.is_archive, a.sdkID, a.isAM, rici.request, rici.impression, rici.click, rici.installs
-FROM apps a LEFT JOIN (SELECT appid, SUM(rpt.request) request, SUM(rpt.impression) impression, SUM(rpt.click) click, SUM(INSTALL) AS installs
-FROM rpt_queue_apps_ads_event_stats_196 rpt WHERE appid IN ( SELECT appid FROM apps WHERE companyid = 196 AND is_archive = 0) AND datetime &gt;= '2020-09-01'AND datetime &lt;= '2020-09-30'
-AND scenesession = 1 GROUP BY appid) rici ON a.appid = rici.appid WHERE companyid = 196 AND a.osID != 0 AND a.is_archive = 0) b LEFT JOIN (
-SELECT app_id appid, SUM( revenue + bonus - service_charges) rev FROM rpt_auto_integration_45 WHERE app_id IN ( SELECT appid FROM apps WHERE companyid = 196
-AND is_archive = 0) AND created_at &gt;= '2020-09-01' AND created_at &lt;= '2020-09-30' GROUP BY app_id) r ON b.appid = r.appid) c, sdk_info sdk
-WHERE c.sdkID = sdk.sdkid ORDER BY revenue DESC) tblApps WHERE 1 = 1 AND (tblApps.brandID IN(12)) AND (tblApps.osID IN(41)) AND (tblApps.appID IN(17322)) ORDER BY tblApps.appID DESC
-LIMIT 0,10
-
-****************** Secret Agent FPS Shooting Game
-****************** 9/1/2020 12:00:00 AM
-****************** 9/30/2020 12:00:00 AM
-****************** Main Menu
-****************** SELECT seq.title as scene_title, ap.* FROM( SELECT sceneid as sceneID, SUM(`request`) as request, SUM(`impression`) as impression , SUM(`click`) as click, SUM(`install`) as installs , (SUM(`impression`) / SUM(`request`) * 100) as fill_rate, (SUM(`click`) / SUM(`impression`) * 100) as ctr FROM rpt_queue_apps_ads_event_stats_196 WHERE appid IN ( SELECT appid FROM apps WHERE companyid = 196 and appID = 17322 and apps.is_archive = 0 ) AND datetime &gt;= '2020-09-01' and datetime &lt;= '2020-09-30' AND scenesession = 1 GROUP BY sceneid) ap, seq_titles seq WHERE ap.sceneid = seq.seqTitleID ORDER BY impression DESC
-****************** Admob
-****************** SELECT  rpt_queue_apps_ads_event_stats_196.adID, ads.title as ad_network_title, ads.adID as ad_network_id,
-                            SUM(`request`) as request, SUM(`impression`) as impression , SUM(`click`) as click,
-                            SUM(`install`) as installs, ads.ad_type as ad_type, ads.provide_clicks as provide_clicks
-                            FROM rpt_queue_apps_ads_event_stats_196
-                            INNER JOIN ads ON ads.adID = rpt_queue_apps_ads_event_stats_196.adID
-                            WHERE
-                            (datetime &gt;= '2020-09-01' and datetime &lt;= '2020-09-30')
-                             and appID = "17322"
-                            GROUP BY rpt_queue_apps_ads_event_stats_196.adID
-</DebugTrace>
+        <ErrorInfo>
+          <Message>Test method Monetization_Automation.Test.Monetization.C_BS_Monetization_stats_Publisher_side threw exception: 
+OpenQA.Selenium.WebDriverException: The HTTP request to the remote WebDriver server for URL http://localhost:50163/session timed out after 180 seconds. ---&gt; System.Net.WebException: The request was aborted: The operation has timed out.</Message>
+          <StackTrace>    at System.Net.HttpWebRequest.GetResponse()
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+ --- End of inner exception stack trace ---
+    at OpenQA.Selenium.Remote.HttpCommandExecutor.MakeHttpRequest(HttpRequestInfo requestInfo)
+   at OpenQA.Selenium.Remote.HttpCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.DriverServiceCommandExecutor.Execute(Command commandToExecute)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.Execute(String driverCommandToExecute, Dictionary`2 parameters)
+   at OpenQA.Selenium.Remote.RemoteWebDriver.StartSession(ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Remote.RemoteWebDriver..ctor(ICommandExecutor commandExecutor, ICapabilities desiredCapabilities)
+   at OpenQA.Selenium.Chrome.ChromeDriver..ctor(ChromeDriverService service, ChromeOptions options, TimeSpan commandTimeout)
+   at Monetization_Automation.Base.PageFactory.CreatePage[TPage,TMap,TValidator](String url, Boolean disposeOnPlayback, Boolean isDesktopWindow, Boolean isSelenium, Boolean isBrowserIE) in E:\Automation\Monetization_Automation\Montization_Automation\Monetization_Automation.Base\Monetization_Automation.Base\PageFactory.cs:line 64
+   at Monetization_Automation.Base.PageFactory.Create[TPage,TMap,TValidator](String applicationPath, Boolean disposeOnPlayback, Boolean isDesktopWindow, Boolean isSelenium, Boolean isBrowserIE) in E:\Automation\Monetization_Automation\Montization_Automation\Monetization_Automation.Base\Monetization_Automation.Base\PageFactory.cs:line 24
+   at Monetization_Automation.Test.Monetization.TS_Login_Monetization() in E:\Automation\Monetization_Automation\Montization_Automation\TestingAPI\Monetization.cs:line 102
+   at Monetization_Automation.Test.Monetization.Monetization_App_Management() in E:\Automation\Monetization_Automation\Montization_Automation\TestingAPI\Monetization.cs:line 115
+   at Monetization_Automation.Test.Monetization.C_BS_Monetization_stats_Publisher_side() in E:\Automation\Monetization_Automation\Montization_Automation\TestingAPI\Monetization.cs:line 70
+</StackTrace>
+        </ErrorInfo>
       </Output>
     </UnitTestResult>
   </Results>
