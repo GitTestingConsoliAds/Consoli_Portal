@@ -94,6 +94,20 @@ namespace Monetization_Automation.Page.Login.Page
                Map.FindAndClickCaptcha();
                return this;
            }*/
+
+
+        
+
+        public LoginPage EnterUserIdForLogin()
+        {
+            Thread.Sleep(2000);
+            Map.FindUserIDToLogin().SendKeys(Keys.Space);
+            Map.FindUserIDToLogin().SendKeys(ExcelUtil.ReadData(1, "UserName"));
+            return this;
+        }
+
+
+
         public LoginPage EnterUserId()
         {
             Thread.Sleep(2000);
